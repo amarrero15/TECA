@@ -1,0 +1,82 @@
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating" class="label">{{nombre}}</ion-label>
+        <ion-input type="text" name="nombre"(ionInput)="setNombre($event)" class="input"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-segment (ionChange)="setSexo($event)" color="atomik">
+          <ion-segment-button value="Femenino" class="genderSelector">
+          <ion-label>{{genero1}}</ion-label>
+          <ion-icon name="Woman"></ion-icon>
+        </ion-segment-button>
+
+        <ion-segment-button value="Masculino" class="genderSelector">
+          <ion-label>{{genero2}}</ion-label>
+          <ion-icon name="Man"></ion-icon>
+        </ion-segment-button>
+      </ion-segment>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label class="label">{{fecha}}</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" value="2020-02-20" placeholder="Seleccione su fecha" (ionChange)="setFechaNacimiento($event)" class="datetime"></ion-datetime>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating" class="label">{{especialidad}}</ion-label>
+        <ion-input type="text" name="especialidad" (ionInput)="setEspecialidad($event)" class="input"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating" class="label">{{email}}</ion-label>
+        <ion-input type="email" name="email" (ionInput)="setEmail($event)" class="input"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label position="floating">{{password}}</ion-label>
+        <ion-input type="password" name="password" (ionInput)="setPassword($event)"></ion-input>
+      </ion-item> 
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col class="ion-text-center">
+      <ion-button shape="round" color="atomik"(click)="create()" class="btnRegister">{{botonRegistro}}</ion-button>
+    </ion-col>
+  </ion-row> 
+
+  <ion-row class="ion-text-center">
+    <ion-col class="optionalText">
+      <ion-label>o</ion-label> 
+    </ion-col>  
+  </ion-row>
+
+  <ion-row class="ion-text-center">
+    <ion-col class="btnLogin">
+      <ion-button fill="clear" (click)="goToInicio()">{{botonLogin}}</ion-button> 
+    </ion-col>
+  </ion-row>
+</ion-grid>
