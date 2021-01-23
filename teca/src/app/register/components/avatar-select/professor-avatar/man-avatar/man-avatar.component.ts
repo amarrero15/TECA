@@ -25,9 +25,6 @@ export class ManAvatarComponent implements OnInit {
     this.newUser.password=localStorage.getItem('password');
     localStorage.removeItem('password');
     
-    //this.newUser.type='Docente';
-    //this.newUser.password=localStorage.getItem('password');
-    //localStorage.removeItem('password');
     this.newManEvent.emit(this.newUser);
   }
 

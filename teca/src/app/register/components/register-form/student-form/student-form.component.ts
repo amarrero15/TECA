@@ -64,10 +64,8 @@ export class StudentFormComponent implements OnInit {
   create() {
     //delete this.newEstudiante._id;
     this.route.navigate(['/registro/avatar'], { queryParams: { data: JSON.stringify(this.newEstudiante), type: JSON.stringify('Estudiante') }});
-    this.createNewStudentEvent.emit(this.newEstudiante);
 
     this.newEstudiante = new Student();
-    this.dataColected.emit(true);
   }
 
   /**

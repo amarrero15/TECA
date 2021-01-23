@@ -61,7 +61,6 @@ export class ProfessorFormComponent implements OnInit {
   create() {
     //delete this.newDocente._id;
     this.route.navigate(['/registro/avatar'], { queryParams: { data: JSON.stringify(this.newDocente), type: JSON.stringify('Docente') }});
-    this.createNewDocenteEvent.emit(this.newDocente);
     this.newDocente = new Professor();
   }
 

@@ -24,8 +24,8 @@
   
       <ion-row >
         <ion-col>
-          <app-professor-form nombre="Nombre" genero1="Femenino" genero2="Masculino" fecha="Fecha Nacimiento" especialidad="Especialidad" email="Email" password="Clave" botonRegistro="Registrarse" botonLogin="Iniciar Sesión" (createNewDocenteEvent)="create($event)" (dataColected)="setDataColected($event)" *ngIf="visibleProfessor"></app-professor-form>  
-          <app-student-form nombre="Nombre" genero1="Femenino" genero2="Masculino" fecha="Fecha Nacimiento" gradoCurso="Grado de curso" email="Email" institucion="Institución" password="Clave" botonRegistro="Registrarse" botonLogin="Iniciar Sesión" (createNewStudentEvent)="createStudent($event)" (dataColected)="setDataColected($event)" *ngIf="visibleStudent"></app-student-form> 
+          <app-professor-form nombre="Nombre" genero1="Femenino" genero2="Masculino" fecha="Fecha Nacimiento" especialidad="Especialidad" email="Email" password="Clave" botonRegistro="Registrarse" botonLogin="Iniciar Sesión"  (dataColected)="setDataColected($event)" *ngIf="visibleProfessor"></app-professor-form>  
+          <app-student-form nombre="Nombre" genero1="Femenino" genero2="Masculino" fecha="Fecha Nacimiento" gradoCurso="Grado de curso" email="Email" institucion="Institución" password="Clave" botonRegistro="Registrarse" botonLogin="Iniciar Sesión"  (dataColected)="setDataColected($event)" *ngIf="visibleStudent"></app-student-form> 
         </ion-col>
       </ion-row>
   

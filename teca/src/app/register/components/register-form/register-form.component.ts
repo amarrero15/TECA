@@ -39,63 +39,7 @@ export class RegisterFormComponent implements OnInit {
     this.setVisible();
   }
 
-  /**
-   * Registro del docente y su cuenta de usuario con las credenciales para hacer login en el sistema
-   * @param newDocente Objeto Docente con los datos obtenidos del form que viene del componente professor-form
-   */
-  create(newDocente: Professor) {
-    //const newUsuario = new Usuario();
-   // newUsuario.email = localStorage.getItem('email'); 
-    localStorage.removeItem('email');
-    //newUsuario.password = localStorage.getItem('password'); 
-    //localStorage.removeItem('password');
-    //newUsuario.tipo = 'Docente';
-    //newUsuario.avatar = 'docente1';
-    //newUsuario.nombre = newDocente.nombre;
-    /*
-    this.AFauth.createUserWithEmailAndPassword(newUsuario.email, newUsuario.password).then(res => {
-      const alumnos = new Alumnos();
-      newUsuario.idUsuario = res.user.uid;
-      newDocente._id = res.user.uid;
-      alumnos.idProfesor = res.user.uid;
-      this.usuarioService.createUser(newUsuario);
-      this.docenteService.createDocente(newDocente);
-      this.alumnosService.createListaAlumnos(alumnos);
-      localStorage.setItem('sexo', newDocente.sexo);
-      localStorage.setItem('tipo', 'Docente');
-      localStorage.setItem('uid', newUsuario.idUsuario);
-      console.log(localStorage.getItem('uid'));
-      this.gotoAvatar();
-    }).catch(err => console.log(err));
-    */
 
-  }
-
-  /**
-   * Registro del estudiante y su cuenta de usuario con las credenciales para hacer login en el sistema
-   * @param newEstudiante Objeto Estudiante con los datos obtenidos del form que viene del componente student-form
-   */
-  createStudent(newEstudiante: Student) {
-    //const newUsuario = new Usuario();
-    /*
-    newUsuario.email = localStorage.getItem('email'); localStorage.removeItem('email');
-    newUsuario.password = localStorage.getItem('password'); localStorage.removeItem('password');
-    newUsuario.tipo = 'Estudiante';
-    newUsuario.avatar ="estudiante1";
-    newUsuario.nombre = newEstudiante.nombre;
-    this.AFauth.createUserWithEmailAndPassword(newUsuario.email, newUsuario.password).then(res => {
-      newUsuario.idUsuario = res.user.uid;
-      newEstudiante._id = res.user.uid;
-      this.usuarioService.createUser(newUsuario);
-      this.estudianteService.createEstudiante(newEstudiante);
-      localStorage.setItem('sexo', newEstudiante.sexo);
-      localStorage.setItem('tipo', 'Estudiante');
-      localStorage.setItem('uid', newUsuario.idUsuario);
-      this.gotoAvatar();
-    }).catch(err => console.log(err));
-    */
-
-  }
 
   setVisible() {
     if (this.visibleStudent === false) {
