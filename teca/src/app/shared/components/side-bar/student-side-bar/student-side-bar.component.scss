@@ -1,0 +1,66 @@
+.principal{
+    width: 18,5257812vw;
+    height: auto;
+    background: #5570FF;
+    padding: 0px;
+}
+.logo{
+    width: 4.84375vw;
+    height: 11.7775vh;
+    margin-top: 5.73vh;
+    margin-left: 6.875vw;
+    margin-right: 6.80703125vw;
+}
+
+.menuOptions{
+    top:6.1175vh
+}
+
+.options{
+    font-family: Muli;
+    color:#6F9CD6
+}
+
+.options:hover, .optionSelect{
+    color: #FFFFFF;
+}
+
+.settings{
+    margin-top:47vh;   
+}
+
+.settings:hover{
+    color: #FFFFFF;
+}
+
+.item #dashboardIcon {
+    content: url('../../../../../assets/icon/sidebar/dashboardColor.svg');
+ }
+ 
+ .item #freeModeIcon {
+     content: url("../../../../../assets/icon/sidebar/freeModeColor.svg");
+ }
+ .item #notesIcon {
+    content: url("../../../../../assets/icon/sidebar/NotesColor.svg");
+}
+ .item #campaignIcon {
+     content: url("../../../../../assets/icon/sidebar/campaignColor.svg");
+ }
+
+ .item #settingsIcon {
+     content: url("../../../../../assets/icon/sidebar/settingsColor.svg");
+ }
+ 
+
+ .item ion-item:hover #dashboardIcon, .itemSelect #dashboardIcon {
+    content: url("../../../../../assets/icon/sidebar/dashboard.svg");
+}
+.item ion-item:hover #freeModeIcon, .itemSelect #freeModeIcon {
+    content: url("../../../../../assets/icon/sidebar/freeMode.svg");
+}
+.item ion-item:hover #notesIcon, .itemSelect #notesIcon {
+    content: url("../../../../../assets/icon/sidebar/Notes.svg");
+}
+.item ion-item:hover #campaignIcon, .itemSelect #campaignIcon {
+    content: url("../../../../../assets/icon/sidebar/campaign.svg");
+}

@@ -1,0 +1,68 @@
+.principal{
+    width: 18,5257812vw;
+    height: auto;
+    background: #5570FF;
+    padding: 0px;
+}
+.logo{
+    width: 4.84375vw;
+    height: 11.7775vh;
+    margin-top: 5.73vh;
+    margin-left: 6.875vw;
+    margin-right: 6.80703125vw;
+}
+
+.menuOptions{
+    top:6.1175vh
+}
+
+.options{
+    font-family: Muli;
+    color:#6F9CD6
+}
+
+.options:hover, .optionSelect{
+    color: #FFFFFF;
+}
+
+.settings{
+    margin-top:47vh;   
+}
+
+.settings:hover{
+    color: #FFFFFF;
+}
+
+.item #dashboardIcon {
+   content: url('../../../../../assets/icon/sidebar/dashboardColor.svg');
+}
+
+.item #userIcon {
+    content: url("../../../../../assets/icon/sidebar/userColor.svg");
+}
+.item #cursoIcon {
+    content: url("../../../../../assets/icon/sidebar/cursoColor.svg");
+}
+.item #puntajeIcon {
+    content: url("../../../../../assets/icon/sidebar/puntajeColor.svg");
+}
+
+.item #settingsIcon {
+    content: url("../../../../../assets/icon/sidebar/settingsColor.svg");
+}
+
+.item ion-item:hover #dashboardIcon:hover, .itemSelect #dashboardIcon {
+    content: url("../../../../../assets/icon/sidebar/dashboard.svg");
+}
+.item ion-item:hover #userIcon, .itemSelect #userIcon {
+    content: url("../../../../../assets/icon/sidebar/user.svg");
+}
+.item ion-item:hover #cursoIcon, .itemSelect #cursoIcon {
+    content: url("../../../../../assets/icon/sidebar/curso.svg");
+}
+.item ion-item:hover #puntajeIcon, .itemSelect #puntajeIcon {
+    content: url("../../../../../assets/icon/sidebar/puntaje.svg");
+}
+
+
+
