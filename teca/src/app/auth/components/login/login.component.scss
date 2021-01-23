@@ -1,0 +1,63 @@
+.principal{
+    margin: auto;
+}
+.loginTitle{
+    margin: auto;
+    font-family: Muli;
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+    color: #5570FF;
+
+}
+.centrarTitulo{
+    margin-top: 180px;
+    text-align: center;
+
+}
+.centrar{
+    text-align: center;
+}
+
+.input{
+    margin: auto;
+    margin-top: 15px;
+    text-align: center;
+    font-family: Muli;
+    
+}
+
+.btnLogin{
+    width: 217px;
+    height: 53px;
+    left: 787px;
+    top: 424px;
+    background: #5570FF;
+    border-radius: 30px;
+    font-family: Muli;
+    text-transform: capitalize;
+  
+}
+
+.btnRegister{
+    font-family: Muli;
+    text-transform: capitalize;
+}
+
+.labelUsuario{
+    position: absolute;
+    width: 123px;
+    height: 18px;
+    left: 586px;
+    top: 337px;
+    
+    font-family: Muli;
+    font-style: normal;
+    font-weight:normal;
+    font-size: 14px;
+    line-height: 18px;
+    
+    /* identical to box height */
+    
+    color: #334D6E;
+}
