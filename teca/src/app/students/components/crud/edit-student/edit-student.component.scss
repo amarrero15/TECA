@@ -1,0 +1,50 @@
+.principal{
+    padding: 0px;
+    width: 674px;
+    height: 376px;
+}
+.header{
+    background: #5570FF;
+}
+.label{
+    margin-left: 4.84375vw;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.01em;
+    color: #334D6E;
+
+}
+.input{
+    width: 307px;
+    border: 1px solid #6F9CD6;
+    text-align: center;
+
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: #334D6E;
+}
+.buttons{
+    margin-left: 31.328125vw;
+}
+.saveButton{
+    border-radius: 5px;
+    border: 1px solid #334D6E;
+}
+.cancelButton{
+    border: 1px solid #334D6E;
+    color: #334D6E; 
+
+}

@@ -10,9 +10,16 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import {firebaseConfig} from '../environments/environment'
-
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+import { MatTableModule } from '@angular/material/table';
+import {FormsModule} from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { PipesModule } from './pipes/pipes.module';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -21,7 +28,12 @@ import {AngularFireAuthModule} from '@angular/fire/auth';
     , IonicModule.forRoot()
     , AppRoutingModule
     , AngularFireModule.initializeApp(firebaseConfig)
-    , AngularFireAuthModule],
+    , AngularFireAuthModule, BrowserAnimationsModule
+    , MatTableModule,
+    MatInputModule,
+    MatButtonModule,
+    FormsModule,
+    PipesModule  ],
   providers: [
     StatusBar,
     SplashScreen,

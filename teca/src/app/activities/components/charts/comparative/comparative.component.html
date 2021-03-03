@@ -1,0 +1,52 @@
+<ion-grid class="principal">
+  <ion-row style="padding: 0px">
+    <ion-label class="title">Cuadro Comparativo por:</ion-label>
+  </ion-row>
+  <ion-row style="padding: 0px; margin-left: 10px;">
+      <ion-col size="fixed" style="padding: 0px; margin-right: 4px">
+        <ion-checkbox [(ngModel)]="this.TypeSimilar" class="checkbox" (click)="this.onChange1()"></ion-checkbox>
+      </ion-col>
+      <ion-col size="fixed" style="padding: 0px;margin-right: 85px; align-self: center">
+        <ion-label class="type-label">Similitud</ion-label>
+      </ion-col>
+      <ion-col size="fixed" style="padding: 0px; margin-right: 4px">
+        <ion-checkbox [checked]="this.TypeDiferences" class="checkbox" (click)="this.onChange2()"></ion-checkbox>
+      </ion-col>
+      <ion-col style="padding: 0px; align-self: center">
+        <ion-label class="type-label">Diferencias</ion-label>
+      </ion-col>
+  </ion-row>
+  <ion-row style="margin-top: 20px; padding: 0px">
+    <ion-col style="padding: 0px">
+      <ion-row style="padding: 0px">
+        <ion-label class="frame-title">Cuadro 01</ion-label>
+      </ion-row>
+      <ion-row style="padding: 0px">
+        <div class="frame-div">
+          <ion-row style="padding: 0px;">
+            <div class="frame-input"><ion-input [(ngModel)]="this.Frames.title1"></ion-input></div>
+          </ion-row>
+          <ion-row style="padding: 0px">
+            <ion-textarea rows="6" class="frame-textarea" [(ngModel)]="this.Frames.text1"></ion-textarea>
+          </ion-row>
+        </div>
+      </ion-row>
+    </ion-col>
+    <ion-col style="padding: 0px">
+        <ion-row style="padding: 0px">
+          <ion-label class="frame-title">Cuadro 02</ion-label>
+        </ion-row>
+        <ion-row style="padding: 0px">
+          <div class="frame-div">
+            <ion-row style="padding: 0px;">
+              <div class="frame-input"><ion-input [(ngModel)]="this.Frames.title2"></ion-input></div>
+            </ion-row>
+            <ion-row style="padding: 0px">
+              <ion-textarea rows="6" class="frame-textarea" [(ngModel)]="this.Frames.text2"></ion-textarea>
+            </ion-row>
+          </div>
+        </ion-row>
+        <ion-label></ion-label>
+      </ion-col>
+  </ion-row>
+</ion-grid>

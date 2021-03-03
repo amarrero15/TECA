@@ -1,0 +1,54 @@
+
+<ion-grid class="principal">
+    <ion-row>
+      <ion-col>
+        <ion-label class="title">Cursos</ion-label>
+      </ion-col>     
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-label class="question">Puedes iniciar creando cursos al darle click a "Activar un nuevo curso"</ion-label>
+      </ion-col>  
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button color="atomik" shape="round" class="activateCourse" (click)="activate()">Activar curso</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="courses">
+      <ion-list>
+        <ion-row >
+          <div *ngFor="let subject of cursos; let i = index">
+            <ion-card  *ngIf="i%4==0"  style="background:#2ED47A;" class="card" (click)="openCourseDetail(subject)">
+              <ion-card-content>
+                <ion-icon slot="start" class="card-icon" src="{{subject.image}}"></ion-icon>
+                <ion-card-title class="card-title">{{subject.subject}}</ion-card-title>
+                <ion-label class="card-subtitle">{{subject.description}}</ion-label>
+              </ion-card-content>
+            </ion-card>
+            <ion-card *ngIf="i%4==1" style="background:#F7685B;" class="card" (click)="openCourseDetail(subject)">
+              <ion-card-content>
+                <ion-icon slot="start" class="card-icon" src="{{subject.image}}"></ion-icon>
+                <ion-card-title class="card-title">{{subject.subject}}</ion-card-title>
+                <ion-label class="card-subtitle">{{subject.description}}</ion-label>
+              </ion-card-content>
+            </ion-card>
+            <ion-card *ngIf="i%4==2" style="background:#FFB946;" class="card" (click)="openCourseDetail(subject)">
+              <ion-card-content>
+                <ion-icon slot="start" class="card-icon" src="{{subject.image}}"></ion-icon>
+                <ion-card-title class="card-title">{{subject.subject}}</ion-card-title>
+                <ion-label class="card-subtitle">{{subject.description}}</ion-label>
+              </ion-card-content>
+            </ion-card>
+            <ion-card *ngIf="i%4==3" style="background:#885AF8;" class="card" (click)="openCourseDetail(subject)">
+              <ion-card-content>
+                <ion-icon slot="start" class="card-icon" src="{{subject.image}}"></ion-icon>
+                <ion-card-title class="card-title">{{subject.subject}}</ion-card-title>
+                <ion-label class="card-subtitle">{{subject.description}}</ion-label>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-row>
+      </ion-list>
+    </ion-row>
+</ion-grid>

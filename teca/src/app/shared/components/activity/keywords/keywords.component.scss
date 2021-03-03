@@ -1,0 +1,50 @@
+.principal {
+    width: 475px;
+    height: 140px;
+}
+.title {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: #334D6E;
+    margin-bottom: 12px;
+}
+.words-content {
+    width: 470.65px;
+    height: 106.39px;
+}
+.word-content {
+    position: relative;
+    align-items: center;
+    width: 99.84px;
+    height: 24.31px;
+    border: 1px solid #B2BFFF;
+    box-sizing: border-box;
+    border-radius: 30px;
+    justify-content: center;
+}
+.word-label-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+.word-label {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: #646464;
+    margin-left: auto;
+    margin-right: auto;
+}
+.word-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    border-radius: 100%;
+} 

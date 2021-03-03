@@ -1,0 +1,65 @@
+.principal{
+    padding: 0px;
+}
+.card{
+    width: 14.0625vw;
+    height: 12.75vh;
+    padding: 0px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    display: flex;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    
+}
+.cardheader{
+    //margin: 0px;
+    padding: 0px;
+}
+.title{
+    font-family: Muli;
+    color: #DCDCDC;
+    font-weight: bolder;
+    font-size: 3.515625vw;
+    text-align: center;
+    
+    
+}
+.item{
+    padding: 0px;
+    margin: auto;
+}
+.subtitle{
+    font-family: Muli;
+    font-weight: bold;
+    font-size: 1.171875vw;
+    color: #D7D7D7;
+    text-align: center;
+    margin-top: 0px;
+}
+.item #studentsIcon {
+    width: 48.9px;
+    height: 48.9px;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    left: 0px;
+    content: url('../../../../../assets/svg/work-report/students.svg');
+ }
+
+ .item #activitiesIcon {
+   width: 48.9px;
+   height: 48.9px;
+   left: 0px;
+   margin-left: 0vw;
+   margin-right: 0vw;
+    content: url('../../../../../assets/svg/work-report/activities.svg');
+ }
+
+ .item #coursesIcon {
+    width: 48.9px;
+    height: 48.9px;
+    left: 0px;
+    margin-left: 0vw;
+    margin-right: 0vw;
+    content: url('../../../../../assets/svg/work-report/courses.svg');
+ }

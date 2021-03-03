@@ -1,0 +1,55 @@
+.title{
+    margin-left: 7.88046875vw;
+    margin-top: 123px;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    color: #5570FF;
+}
+.question{
+    margin-top: 5.23px;
+    margin-left: 7.88046875vw;;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.093754vw;
+    color: #334D6E;
+}
+.share-txt{
+    margin-top: 43px;
+    margin-left: 8.03671875vw;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.25vw;
+    color: #334D6E;
+}
+.searchbar{
+    position: absolute;
+    width: 42.5vw;
+    height: 6.25vh;
+    left: 7.88046875vw;
+    top: 292px;
+
+    background: #B2C0FC;
+    border-radius: 10px;
+}
+.box{
+    width: 518px;
+    height: 285px;
+    margin-left: 128px;
+    margin-top: 80px;
+  
+    background: rgba(178, 192, 252, 0.5);
+}
+.btn{
+    border-radius: 100px;
+}
+.saveButton{
+    margin-left: 732.87px;
+    margin-top: 58px;
+}
+.item #addIcon {
+    content: url('../../../../assets/icon/general/add.svg');
+}

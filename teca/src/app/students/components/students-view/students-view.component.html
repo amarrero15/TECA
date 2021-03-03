@@ -1,0 +1,30 @@
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-label class="title">Mis Estudiantes</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-segment (ionChange)="selectView($event)" class="selecView">
+        <ion-segment-button value="Todos">
+          <ion-label class="viewSelection">Todos</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Grupos">
+          <ion-label class="viewSelection">Grupos</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button shape="round" color="atomik" class="addStudent" (click)="presentPopover()">Agregar Estudiante</ion-button>
+    </ion-col>     
+  </ion-row>
+  <ion-row>
+    <ion-col class="table">
+      <app-general-table *ngIf="!visibleGroups"></app-general-table>
+      <app-groups-table *ngIf="visibleGroups"></app-groups-table>
+    </ion-col>
+  </ion-row>
+</ion-grid>

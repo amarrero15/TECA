@@ -29,20 +29,20 @@ export class StudentFormComponent implements OnInit {
   ngOnInit() {}
 
   setNombre(event: any) {
-    this.newEstudiante.nombre = event.target.value;
+    this.newEstudiante.name = event.target.value;
   }
 
   setSexo(event: any) {
-    this.newEstudiante.sexo = event.target.value;
+    this.newEstudiante.gender = event.target.value;
 
   }
 
   setFechaNacimiento(event: any) {
-    this.newEstudiante.fechaNacimiento = event.target.value;
+    this.newEstudiante.date = event.target.value;
   }
 
   setGradoCurso(event: any) {
-    this.newEstudiante.grado = event.target.value;
+    this.newEstudiante.level = event.target.value;
   }
 
   setEmail(event: any) {
@@ -51,7 +51,7 @@ export class StudentFormComponent implements OnInit {
   }
 
   setInstitucion(event: any) {
-    this.newEstudiante.institucion = event.target.value;
+    this.newEstudiante.highschool = event.target.value;
   }
 
   setPassword(event: any) {

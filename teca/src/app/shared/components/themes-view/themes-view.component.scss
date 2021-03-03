@@ -1,0 +1,50 @@
+.card {
+    //position: absolute;
+    width: 366px;
+    height: 181px;
+    border-style: solid;
+    border-color: #5570FF;
+    border-width: 1.5px;
+    border-radius: 10px;    
+}
+
+.card-title {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 19px;
+    letter-spacing: 0.01em;
+    color: #4357BF;
+}
+
+.card-content {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    width: 244px;
+    height: 70px;
+    color: #334D6E;
+}
+
+.img {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+    margin-left: 15px;
+}
+
+.button {
+    width: 91px;
+    height: 26px;
+    margin-left: auto;
+    margin-right: 14px;
+    margin-bottom: 14px;
+}
+
+.title-content {
+    margin-bottom: 46px;    
+}

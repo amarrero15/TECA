@@ -1,0 +1,11 @@
+<ion-grid>
+  <ion-row>
+    <ion-col size="auto">
+      <app-professor-side-bar></app-professor-side-bar>
+    </ion-col>
+    <ion-col>
+      <app-theme-editor [themeDataInfo]="themeData" (themeEditorEvent)="createTheme($event)"></app-theme-editor>
+      <app-themes-view [chapterData]="themeData"></app-themes-view>
+    </ion-col>
+  </ion-row>
+</ion-grid>

@@ -1,0 +1,19 @@
+<ion-grid class="principal">
+  <ion-row>
+    <ion-label class="title">{{Title}}</ion-label>
+  </ion-row>
+  <ion-row>
+      <ion-label class="indications-label">{{Indications}}</ion-label>
+    </ion-row>
+  <ion-row>
+      <ion-segment scrollable class="chart-options-content">
+        <ion-segment-button class="chart-option-container" *ngFor="let option of ChartOptions" (click)="openActivity($event)" >
+          <div class="chart-option-img-container"> 
+            <ion-img  src="{{option.src}}" class="chart-option-img"></ion-img>
+          </div>
+          <ion-label text-capitalize class="chart-option-label">{{option.name}}</ion-label>
+        </ion-segment-button>
+        </ion-segment>
+      
+  </ion-row>
+</ion-grid>

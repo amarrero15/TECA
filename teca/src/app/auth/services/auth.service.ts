@@ -14,6 +14,8 @@ export class AuthService {
         // Guardar el uid para cargar la informacion
         localStorage.setItem('token', user.user.uid);
         console.log(localStorage.getItem('token'));
+        //localStorage.setItem('userType', user.user.uid);
+        //console.log(localStorage.getItem('token'));
         // this.usuarioService.getCurrentUser();
         resolve(user);
       }).catch(err => rejected(err));

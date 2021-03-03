@@ -1,0 +1,26 @@
+<ion-grid>
+  <ion-row></ion-row>
+
+  <ion-row>
+    <ion-label class="title">{{courseData.subject}}</ion-label>
+  </ion-row>
+
+  <ion-row>
+    <ion-button class="activate-button" (click)="showDropDown()">Agregar materiales</ion-button>
+  </ion-row>
+
+  <ion-row>
+    <div *ngFor="let chapter of courseData.chapters; let i=index" >
+      <ion-card class="card" (click)="openDetail()">
+        <ion-card-content>
+          <ion-card-title class="card-title">{{chapter.title}}</ion-card-title>
+          <ion-img class="card-icon" *ngIf="i%4==0" src="assets/svg/courses/chapters/color1.svg"></ion-img>
+          <ion-img class="card-icon" *ngIf="i%4==1" src="assets/svg/courses/chapters/color2.svg"></ion-img>
+          <ion-img class="card-icon" *ngIf="i%4==2" src="assets/svg/courses/chapters/color3.svg"></ion-img>
+          <ion-img class="card-icon" *ngIf="i%4==3" src="assets/svg/courses/chapters/color4.svg"></ion-img>
+        </ion-card-content>
+      </ion-card>
+    </div>   
+  </ion-row>
+  
+</ion-grid>

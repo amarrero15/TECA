@@ -3,6 +3,7 @@ import { NavController } from '@ionic/angular';
 import { AuthService } from '../../services/auth.service';
 import {UserService} from '../../services/user.service';
 import { User } from '../../../models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -22,8 +23,7 @@ export class LoginComponent implements OnInit {
     private navCtrl: NavController,
     private userService: UserService,
     private authService: AuthService,
-    //private docenteService: DocenteService,
-    //private estudianteService: EstudianteService
+    private route: Router,
   ) { }
 
   ngOnInit() {}
@@ -43,10 +43,13 @@ export class LoginComponent implements OnInit {
       this.userService.getUsuario(localStorage.getItem('token')).subscribe(mycurrentUser => {
         const currentUser = mycurrentUser as User;
         localStorage.setItem('usuario', JSON.stringify(currentUser));
+        localStorage.setItem('userType', currentUser.type);
         if (currentUser.type === 'Docente') {
-          this.navCtrl.navigateForward('/panel-teacher');
+          this.route.navigate(['principal'])
+          //this.navCtrl.navigateForward('/principal');
+          console.log(localStorage.getItem('usuario'));
         } else {
-          this.navCtrl.navigateForward('/panel');
+          this.navCtrl.navigateForward('/principal');
         }
       });
     }).catch(err => console.log('Error de Acceso') );

@@ -1,0 +1,27 @@
+<ion-content>
+  <ion-grid>
+    <ion-row *ngFor="let activity of activities">
+      <ion-col size="auto">
+        <ion-card color="green">
+          <ion-card-header>
+            <ion-card-title>{{activity.title}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="auto">
+        <ion-card color="purple">
+          <ion-card-header>
+            <ion-card-title>{{activity.title}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+      <ion-col size="auto">
+        <ion-card color="red">
+          <ion-card-header>
+            <ion-card-title>{{activity.title}}</ion-card-title>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

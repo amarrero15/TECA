@@ -1,0 +1,71 @@
+<ion-grid>
+  <ion-row></ion-row>
+  <ion-row>
+    <ion-label class="title"> Activar Cursos</ion-label>
+  </ion-row>
+
+  <ion-row>
+    <ion-list class="list">
+      <ion-radio-group>
+        <ion-item>    
+          <ion-radio value="Estudios Sociales" (ionFocus)="setSubject($event)"></ion-radio>
+          <div class="subject-logo">
+            <ion-img class="logo" src="assets/svg/courses/sociales.svg"></ion-img>
+          </div>    
+          <ion-label class="subject-name" class="options">Estudios Sociales</ion-label>
+        </ion-item>
+
+        <ion-item >    
+          <ion-radio value="Matemáticas" (ionFocus)="setSubject($event)"></ion-radio>
+          <div class="subject-logo">
+            <ion-img class="logo" src="assets/svg/courses/matematicas.svg"></ion-img>
+          </div>    
+          <ion-label class="subject-name" class="options">Matemáticas</ion-label>
+        </ion-item>
+
+        <ion-item >    
+          <ion-radio value="Español" (ionFocus)="setSubject($event)"></ion-radio>
+          <div class="subject-logo">
+            <ion-img class="logo" src="assets/svg/courses/espaniol.svg"></ion-img>
+          </div>    
+          <ion-label class="subject-name" class="options">Español</ion-label>
+        </ion-item>
+
+        <ion-item >    
+          <ion-radio value="Cívica" (ionFocus)="setSubject($event)"></ion-radio>
+          <div class="subject-logo">
+            <ion-img class="logo" src="assets/svg/courses/civica.svg"></ion-img>
+          </div>    
+          <ion-label class="subject-name" class="options">Cívica</ion-label>
+        </ion-item>
+
+        <ion-item >    
+          <ion-radio value="Biología" (ionFocus)="setSubject($event)"></ion-radio>
+          <div class="subject-logo">
+            <ion-img class="logo" src="assets/svg/courses/biologia.svg"></ion-img>
+          </div>    
+          <ion-label class="subject-name" class="options">Biología</ion-label>
+        </ion-item>
+
+        <ion-item >    
+          <ion-radio value="Química" (ionFocus)="setSubject($event)"></ion-radio>
+          <div class="subject-logo">
+            <ion-img class="logo" src="assets/svg/courses/quimica.svg"></ion-img>
+          </div>    
+          <ion-label class="subject-name" class="options">Química</ion-label>
+        </ion-item>
+
+        <ion-item >    
+          <ion-radio value="Física" (ionFocus)="setSubject($event)"></ion-radio>
+          <div class="subject-logo">
+            <ion-img class="logo" src="assets/svg/courses/fisica.svg"></ion-img>
+          </div>    
+          <ion-label class="subject-name" class="options">Física</ion-label>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </ion-row>
+  <ion-row>
+    <ion-button color="atomik" shape="round" (click)="next()" class="nextButton"> Siguiente</ion-button>
+  </ion-row>
+</ion-grid>

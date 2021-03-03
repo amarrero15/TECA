@@ -4,12 +4,23 @@ import { AngularFirestore } from '@angular/fire/firestore';
 import { User } from '../../models/user';
 import { Professor } from '../../models/professor';
 import { Student } from '../../models/student';
+import { Indicators } from '../../models/indicators';
+import { CampaignCourse } from '../interfaces/campaign-course';
 @Injectable({
   providedIn: 'root'
 })
 export class RegisterService {
 
   constructor(private AFauth: AngularFireAuth, private db: AngularFirestore) { }
+
+  private createIndicators(indicators: Indicators){
+    this.db.collection('indicators').doc(indicators.professorId).set({
+      professorId: indicators.professorId,
+      students: indicators.students,
+      activities: indicators.activities,
+      courses: indicators.courses
+    })
+  }
 
   register(user: User){
     return new Promise((resolve, rejected) => {
@@ -45,13 +56,21 @@ export class RegisterService {
     return new Promise((resolve, rejected) => {
       this.db.collection('students').doc(student._id).set({
         id:student._id,
-        name:student.nombre,
-        gender: student.sexo,
-        date: student.fechaNacimiento,
-        level: student.grado,
-        highschool: student.institucion,
+        name:student.name,
+        gender: student.gender,
+        date: student.date,
+        level: student.level,
+        highschool: student.highschool,
         email: student.email,
       }).then(res =>{
+        const data ={
+          studentId: student._id,
+          courses: []
+        }
+        this.db.collection('campaign').doc(student._id).set({
+          studentId: data.studentId,
+          courses: data.courses
+        })
         resolve(res);
       }).catch(err => rejected(err));
     });    
@@ -62,8 +81,11 @@ export class RegisterService {
       this.AFauth.createUserWithEmailAndPassword(user.email, user.password).then(res =>{
         professor._id= res.user.uid;
         user.idUser=res.user.uid;
+        const indicators = new Indicators();
+        indicators.professorId= res.user.uid;
         this.register(user);
         this.createProfessor(professor);
+        this.createIndicators(indicators);
         resolve(res);
       }).catch(err => rejected(err));
       this.AFauth.signOut();
@@ -81,5 +103,9 @@ export class RegisterService {
       }).catch(err => rejected(err));
       this.AFauth.signOut();
     });
+  }
+
+  logout() {
+    this.AFauth.signOut();
   }
 }

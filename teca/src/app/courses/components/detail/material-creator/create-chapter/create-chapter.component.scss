@@ -1,0 +1,58 @@
+.principal{
+    padding: 0px;
+}
+.header{
+    background: #5570FF;
+}
+.chapter-title {
+    top: 10px;
+    //left: 15px;
+    position: relative;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    letter-spacing: 0.01em;
+    color: #FFFFFF;
+  }
+.chapter-input {
+    width: 511px;
+    height: 27px;
+    border: 1px solid rgba(111, 156, 214, 0.8);
+    box-sizing: border-box;
+}
+.chapter-label {
+    position: relative;
+    left: 43px;
+    top:10px;
+  
+  
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 0.01em;
+  
+    color: #334D6E;
+  }
+  .chapter-color {
+    position: relative;
+    height: 23px;
+    padding-left: 5px;
+    top:5px;
+    border-radius: 4px;
+  }
+.buttons{
+    margin-left: 388px;
+}
+.saveButton{
+    border-radius: 5px;
+    border: 1px solid #334D6E;
+}
+.cancelButton{
+    border: 1px solid #334D6E;
+    color: #334D6E; 
+
+}

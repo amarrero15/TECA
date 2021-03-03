@@ -1,0 +1,78 @@
+<ion-grid>
+  <ion-row>
+    <ion-searchbar class="searchbar"></ion-searchbar>
+  </ion-row>
+  <ion-row>
+    <ion-col class="level">
+      <ion-segment (ionChange)="selectLevel($event)" >
+        <ion-segment-button>
+          <ion-label class="levelSelection">Sétimo</ion-label>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-label class="levelSelection">Octavo</ion-label>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-label class="levelSelection">Noveno</ion-label>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-label class="levelSelection">Décimo</ion-label>
+        </ion-segment-button>
+        <ion-segment-button>
+          <ion-label class="levelSelection">Undécimo</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-col>
+    <ion-col>
+      <table mat-table [dataSource]="studentsList"  #tabla1>
+        <ng-container matColumnDef="nombre">
+          <th *matHeaderCellDef class="title">
+            <ion-item lines=none>
+              <ion-label class="headers">Nombre</ion-label>
+              <ion-icon name="chevron-down"></ion-icon>
+            </ion-item>
+          </th>
+          <td  *matCellDef="let salesman" class="rows"> {{salesman.nombre}} </td>
+        </ng-container> 
+        <ng-container matColumnDef="grado">
+          <th  *matHeaderCellDef class="title">
+            <ion-item lines=none>
+              <ion-label class="headers">Grado</ion-label>
+              <ion-icon name="chevron-down"></ion-icon>
+            </ion-item>
+          </th>
+          <td  *matCellDef="let salesman" class="rows"> {{salesman.grado}} </td>
+        </ng-container>     
+        <ng-container matColumnDef="email">
+          <th  *matHeaderCellDef class="title">
+            <ion-item lines=none>
+              <ion-label class="headers">Correo</ion-label>
+            </ion-item>
+          </th>
+          <td  *matCellDef="let salesman" class="rows"> {{salesman.email}} </td>
+        </ng-container>
+        <ng-container matColumnDef="rendimiento">
+          <th  *matHeaderCellDef class="title">
+            <ion-item lines=none>
+              <ion-label class="headers">Rendimiento</ion-label>
+            </ion-item>
+          </th>
+          <td *matCellDef="let salesman" class="rows"> {{salesman.rendimiento}} </td>
+        </ng-container>  
+        <ng-container matColumnDef="editar">
+          <th  *matHeaderCellDef>
+            <ion-item lines="none">
+              <ion-label class="headers">Editar</ion-label>
+            </ion-item>
+          </th>
+          <td  *matCellDef="let j = index;" class="ion-text-center">
+            <ion-button (click)="updateRow(j)" class="editButton">
+              <ion-icon name="pencil-outline"></ion-icon>
+            </ion-button>
+          </td>
+        </ng-container> 
+        <tr mat-header-row *matHeaderRowDef="columns"></tr>
+        <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+      </table>
+    </ion-col>
+  </ion-row>
+</ion-grid>

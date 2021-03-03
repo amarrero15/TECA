@@ -3,6 +3,8 @@ import { User } from '../../../../models/user';
 import { Student } from '../../../../models/student';
 import { RegisterService } from '../../../services/register.service';
 import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/auth';
+
 
 @Component({
   selector: 'app-student-avatar',
@@ -20,7 +22,7 @@ export class StudentAvatarComponent implements OnInit {
   public visibleMasculino = false;
   public visibleFemenino = true;
   
-  constructor(private registerService: RegisterService, private route: Router) {}
+  constructor(private registerService: RegisterService, private route: Router, private AFauth: AngularFireAuth) {}
 
   ngOnInit() {
     this.setVisibleAvatar();
@@ -29,7 +31,7 @@ export class StudentAvatarComponent implements OnInit {
   }
 
   setVisibleAvatar() {
-    if (this.studentInfo.sexo === 'Femenino') {
+    if (this.studentInfo.gender === 'Femenino') {
       this.visibleFemenino = true;
       this.visibleMasculino = false;
     } else {
@@ -39,11 +41,12 @@ export class StudentAvatarComponent implements OnInit {
   }
 
   create(usuario: User) {
-    usuario.name= this.studentInfo.nombre;
+    usuario.name= this.studentInfo.name;
     usuario.email= this.studentInfo.email;
     this.registerService.registerStudent(this.studentInfo, usuario).then(res =>{
-      this.route.navigate(['/inicio']);
     });
+    this.registerService.logout();
+    this.route.navigate(['/inicio']);
   }
 
 

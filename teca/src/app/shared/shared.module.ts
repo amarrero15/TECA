@@ -4,6 +4,18 @@ import { BannerComponent } from './components/banner/banner.component';
 import { IonicModule } from '@ionic/angular';
 import { ProfessorSideBarComponent } from './components/side-bar/professor-side-bar/professor-side-bar.component';
 import { StudentSideBarComponent } from './components/side-bar/student-side-bar/student-side-bar.component';
+import { ProfessorProfileComponent } from './components/profile-bar/professor-profile/professor-profile.component';
+import { StudentProfileComponent } from './components/profile-bar/student-profile/student-profile.component';
+import { ProfessorDataComponent } from './components/profile-bar/personal-data/professor-data/professor-data.component';
+import { StudentDataComponent } from './components/profile-bar/personal-data/student-data/student-data.component';
+import { ReminderComponent } from './components/profile-bar/reminder/reminder.component';
+import { ThemeEditorComponent } from './components/theme-editor/theme-editor.component';
+import { FormsModule } from '@angular/forms';
+import { ThemesViewComponent } from './components/themes-view/themes-view.component';
+import { ReflectiveReadingComponent } from './components/reflective-reading/reflective-reading.component';
+import { StartActivityComponent } from './components/activity/start-activity/start-activity.component';
+import { CreateChartComponent } from './components/activity/create-chart/create-chart.component';
+import { KeywordsComponent } from './components/activity/keywords/keywords.component';
 
 
 
@@ -11,17 +23,40 @@ import { StudentSideBarComponent } from './components/side-bar/student-side-bar/
 @NgModule({
   declarations: [
       BannerComponent
+    , CreateChartComponent
+    , KeywordsComponent
     , ProfessorSideBarComponent
     , StudentSideBarComponent
-    , ProfessorSideBarComponent],
+    , ProfessorSideBarComponent
+    , ProfessorProfileComponent
+    , StartActivityComponent
+    , StudentProfileComponent
+    , ProfessorDataComponent
+    , StudentDataComponent
+    , ReflectiveReadingComponent
+    , ReminderComponent
+    , ThemeEditorComponent
+    , ThemesViewComponent],
   exports:[
       BannerComponent
+    , CreateChartComponent
+    , KeywordsComponent
     , ProfessorSideBarComponent
     , StudentSideBarComponent
-    , ProfessorSideBarComponent],
+    , ProfessorSideBarComponent
+    , ProfessorProfileComponent
+    , StartActivityComponent
+    , StudentProfileComponent
+    , ProfessorDataComponent
+    , StudentDataComponent
+    , ReflectiveReadingComponent
+    , ReminderComponent
+    , ThemeEditorComponent
+    , ThemesViewComponent],
   imports: [
     CommonModule,
-    IonicModule
+    IonicModule,
+    FormsModule
   ]
 })
 export class SharedModule { }

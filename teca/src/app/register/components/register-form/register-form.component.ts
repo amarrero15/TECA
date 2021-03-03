@@ -23,12 +23,7 @@ export class RegisterFormComponent implements OnInit {
 
   constructor(
     private navCtrl: NavController,
-    //private docenteService: DocenteService,
-    //private estudianteService: EstudianteService,
-    //private usuarioService: UsuarioService,
-    //private alumnosService: AlumnosService,
-    //private authenticationService: AuthenticationService,
-    //private AFauth: AngularFireAuth,
+
   ) { }
 
   ngOnInit() {

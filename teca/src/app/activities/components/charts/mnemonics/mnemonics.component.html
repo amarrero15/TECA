@@ -1,0 +1,33 @@
+<ion-grid>
+  <div class="second-principal">
+    <ion-row style="margin-top: 50px">
+      <ion-label class="title">Conceptos claves a memorizar</ion-label>
+    </ion-row>
+    <ion-row style="margin-top: 20px; position: relative;">
+      <div class="known-words-box"><div></div></div>
+      <ion-col *ngFor="let mnemonic of Mnemonics ; let i = index">
+        <ion-row style="justify-content: center">
+          <div style="position: relative">
+            <ion-input [(ngModel)]="this.Mnemonics[i].concept" class="words-input"></ion-input>
+            <ion-fab vertical="top" horizontal="end" style="right: -5px; top: -10px">
+              <ion-fab-button class="buttons" (click)="delete(i)">
+                <ion-icon style="color:white; padding: 0px;font-size: 20px;" name="close"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+          </div>
+        </ion-row >
+        <ion-row style="justify-content: center">
+          <ion-img style="height: 107px;" src="assets/svg/activities/dashed-line.svg"></ion-img>
+        </ion-row>
+        <ion-row style="justify-content: center; margin-bottom: 12px">
+          <div>
+            <ion-input [(ngModel)]="this.Mnemonics[i].knownword" class="words-input"></ion-input>
+          </div>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row  style="justify-content: center; margin-bottom: 12px;margin-top: 12px">
+      <ion-label class="bottom-title">Palabras conocidas</ion-label>
+    </ion-row>
+  </div>
+</ion-grid>

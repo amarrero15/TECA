@@ -1,0 +1,32 @@
+.principal{
+    width: 18.59375vw;
+    height: 19.75vh;
+}
+
+.drop-title {
+    //position: relative;
+    //width: 100px;
+    //height: 39px;
+    padding-left: 10px;
+    top: 15px;
+  
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+  
+    color: #334D6E;
+  }
+
+
+.item #fileIcon {
+    content: url('../../../../../assets/icon/courses/materials/file.svg');
+}
+.item #themeIcon {
+    content: url('../../../../../assets/icon/courses/materials/theme.svg');
+}
+.item #activityIcon {
+    content: url('../../../../../assets/icon/courses/materials/activity.svg');
+}
