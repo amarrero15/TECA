@@ -1,3 +1,6 @@
+.addButton{
+    margin-left: 800px;
+}
 .card {
     //position: absolute;
     width: 366px;
@@ -47,4 +50,10 @@
 
 .title-content {
     margin-bottom: 46px;    
+}
+
+.item #addIcon {
+    margin-left: auto;
+    margin-right: auto;
+    content: url('../../../../assets/icon/general/add.svg');
 }

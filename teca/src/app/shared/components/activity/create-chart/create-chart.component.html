@@ -7,7 +7,7 @@
     </ion-row>
   <ion-row>
       <ion-segment scrollable class="chart-options-content">
-        <ion-segment-button class="chart-option-container" *ngFor="let option of ChartOptions" (click)="openActivity($event)" >
+        <ion-segment-button class="chart-option-container" *ngFor="let option of activityOptions.technique" value={{option.value}} (click)="openActivity($event)" >
           <div class="chart-option-img-container"> 
             <ion-img  src="{{option.src}}" class="chart-option-img"></ion-img>
           </div>

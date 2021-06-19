@@ -29,11 +29,11 @@ export class StudentsViewComponent implements OnInit {
     }
   }
 
-  async presentPopover(ev: any) {
+  async presentPopover() {
     const popover = await this.popoverController.create({
       component: AddStudentComponent,
       cssClass: 'addStudent-popover-class',
-      event: ev,
+      //event: any,
       translucent: true
     });
     return await popover.present();

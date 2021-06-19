@@ -1,0 +1,28 @@
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-label>Estadísticas</ion-label>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <div class="statistics-box" (click)="goStatistics()">
+        <ion-row>
+          <ion-label class="statistics-title">Enfermedades gástricas</ion-label>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <div class="dot"></div>
+            <ion-label class="statistics-text">Rendimiento de estudiantes</ion-label>
+          </ion-col>
+          <ion-col>
+            <circle-progress [percent]="90" [titleColor]="'#2ED47A'" [unitsColor]="'#2ED47A'" [outerStrokeColor]="'#2ED47A'" class="progress"></circle-progress>
+          </ion-col>
+        </ion-row>
+      </div>
+    </ion-col>
+    <ion-col>
+      
+    </ion-col>
+  </ion-row>
+</ion-grid>

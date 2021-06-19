@@ -1,5 +1,6 @@
 export interface TechniqueI {
-    techniqueId:string;
+    src:string;
     name:string;
+    value:string;
 }
 

@@ -18,11 +18,11 @@
 
 .options{
     font-family: Muli;
-    color:#6F9CD6
+    color:#FFFFFF
 }
 
 .options:hover, .optionSelect{
-    color: #FFFFFF;
+    color:#6F9CD6;
 }
 
 .settings{
@@ -34,17 +34,17 @@
 }
 
 .item #dashboardIcon {
-   content: url('../../../../../assets/icon/sidebar/dashboardColor.svg');
+   content: url('../../../../../assets/icon/sidebar/dashboard.svg');
 }
 
 .item #userIcon {
-    content: url("../../../../../assets/icon/sidebar/userColor.svg");
+    content: url("../../../../../assets/icon/sidebar/user.svg");
 }
 .item #cursoIcon {
-    content: url("../../../../../assets/icon/sidebar/cursoColor.svg");
+    content: url("../../../../../assets/icon/sidebar/curso.svg");
 }
 .item #puntajeIcon {
-    content: url("../../../../../assets/icon/sidebar/puntajeColor.svg");
+    content: url("../../../../../assets/icon/sidebar/puntaje.svg");
 }
 
 .item #settingsIcon {

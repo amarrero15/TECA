@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-create-chart',
@@ -6,9 +6,10 @@ import { Router } from '@angular/router';
   styleUrls: ['./create-chart.component.scss'],
 })
 export class CreateChartComponent implements OnInit {
-
+  @Output() charSelectedEvent = new EventEmitter();
   Title: string = "Crear ficha";
   Indications: string = "Elige el tipo de ficha según indicaciones de la actividad.";
+  @Input() activityOptions: any;
   ChartOptions: any = [
     {
       "src": "assets/svg/charts/analogy.svg",
@@ -43,11 +44,14 @@ export class CreateChartComponent implements OnInit {
   ];
   constructor(private route: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.activityOptions);
+  }
 
   openActivity(event: any){
-    this.route.navigate(['/actividades']);
+    //this.route.navigate(['/actividades']);
     console.log(event.target.value);
+    this.charSelectedEvent.emit(event.target.value);
   }
 
 }

@@ -19,11 +19,11 @@
         <app-keywords [Keywords]="keywordsActivity" class="keywords-component"></app-keywords>
     </ion-row>
     <ion-row>
-        <app-create-chart class="create-chart-component"></app-create-chart>
+        <app-create-chart class="create-chart-component" [activityOptions]="activities" (charSelectedEvent)=loadChart($event)></app-create-chart>
     </ion-row>
     <ion-row>
       <ion-col>
-          <ion-button float-end shape="round" class="start-button">
+          <ion-button float-end shape="round" class="start-button" (click)="goToActivity()">
               <ion-label text-capitalize class="start-button-label">Iniciar actividad</ion-label>
             </ion-button>
       </ion-col>

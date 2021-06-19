@@ -42,8 +42,10 @@ ion-select{
     left: 43px;
     border: 1px solid rgba(111, 156, 214, 0.8);
     box-sizing: border-box;
+    white-space: normal
     
 }
+
 .activity-textarea {
     //position:relative;
     width: 400px;
@@ -63,4 +65,8 @@ ion-select{
     border: 1px solid #334D6E;
     color: #334D6E; 
 
+}
+.techniqueRow{
+    margin-top: 20px;
+    margin-left: 43px;
 }

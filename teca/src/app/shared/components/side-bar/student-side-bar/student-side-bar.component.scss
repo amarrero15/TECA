@@ -18,11 +18,12 @@
 
 .options{
     font-family: Muli;
-    color:#6F9CD6
+    color: #FFFFFF;
 }
 
 .options:hover, .optionSelect{
     color: #FFFFFF;
+    color:#6F9CD6;
 }
 
 .settings{
@@ -34,17 +35,17 @@
 }
 
 .item #dashboardIcon {
-    content: url('../../../../../assets/icon/sidebar/dashboardColor.svg');
+    content: url('../../../../../assets/icon/sidebar/dashboard.svg');
  }
  
  .item #freeModeIcon {
-     content: url("../../../../../assets/icon/sidebar/freeModeColor.svg");
+     content: url("../../../../../assets/icon/sidebar/freeMode.svg");
  }
  .item #notesIcon {
-    content: url("../../../../../assets/icon/sidebar/NotesColor.svg");
+    content: url("../../../../../assets/icon/sidebar/Notes.svg");
 }
  .item #campaignIcon {
-     content: url("../../../../../assets/icon/sidebar/campaignColor.svg");
+     content: url("../../../../../assets/icon/sidebar/campaign.svg");
  }
 
  .item #settingsIcon {
@@ -53,14 +54,14 @@
  
 
  .item ion-item:hover #dashboardIcon, .itemSelect #dashboardIcon {
-    content: url("../../../../../assets/icon/sidebar/dashboard.svg");
+    content: url("../../../../../assets/icon/sidebar/dashboardColor.svg");
 }
 .item ion-item:hover #freeModeIcon, .itemSelect #freeModeIcon {
-    content: url("../../../../../assets/icon/sidebar/freeMode.svg");
+    content: url("../../../../../assets/icon/sidebar/freeModeColor.svg");
 }
 .item ion-item:hover #notesIcon, .itemSelect #notesIcon {
-    content: url("../../../../../assets/icon/sidebar/Notes.svg");
+    content: url("../../../../../assets/icon/sidebar/NotesColor.svg");
 }
 .item ion-item:hover #campaignIcon, .itemSelect #campaignIcon {
-    content: url("../../../../../assets/icon/sidebar/campaign.svg");
+    content: url("../../../../../assets/icon/sidebar/campaignColor.svg");
 }

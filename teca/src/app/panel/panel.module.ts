@@ -8,6 +8,7 @@ import { StudentPanelComponent } from './components/control-panel/student-panel/
 import { StudentDashboardComponent } from './components/dashboard/student-dashboard/student-dashboard.component';
 import { ProfessorDashboardComponent } from './components/dashboard/professor-dashboard/professor-dashboard.component';
 import { WorkReportComponent } from './components/dashboard/work-report/work-report.component';
+import { StatisticsModule } from '../statistics/statistics.module';
 
 
 
@@ -27,7 +28,8 @@ import { WorkReportComponent } from './components/dashboard/work-report/work-rep
   imports: [
     CommonModule,
     IonicModule,
-    SharedModule
+    SharedModule,
+    StatisticsModule
   ]
 })
 export class PanelModule { }

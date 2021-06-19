@@ -11,7 +11,7 @@ export class SubtopicComponent implements OnInit {
   visibleThemes=true;
   visibleReading=false;
   visibleActivity=false;
-  themeSelected = new Theme();
+  themeSelected= new Theme();
   myKeywords: any[];
   @Input() chapterId:any;
   constructor(private route: Router) { }
@@ -24,9 +24,14 @@ export class SubtopicComponent implements OnInit {
     this.visibleReading=true;
   }
 
-  goToActivity(){
-    this.route.navigate(['/actividades']);
-    //this.route.navigate(['/actividades'], {queryParams:{ keywords: JSON.stringify(this.myKeywords)}});
+  goToActivity(event: any){
+    //this.route.navigate(['/actividades'], );
+    this.route.navigate(['/actividades'], {
+      queryParams:{ 
+      activity: JSON.stringify(this.themeSelected.activities.activityId),
+      chartSelected: JSON.stringify(event),
+      keywords:JSON.stringify(this.myKeywords)
+    }});
   }
 
   loadKeywords(keywords: any[]){

@@ -33,7 +33,7 @@ import { PipesModule } from './pipes/pipes.module';
     MatInputModule,
     MatButtonModule,
     FormsModule,
-    PipesModule  ],
+    PipesModule],
   providers: [
     StatusBar,
     SplashScreen,

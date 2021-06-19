@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./synonyms.component.scss'],
 })
 export class SynonymsComponent implements OnInit {
-
+  value1='Sinónimos';
+  value2='Antónimos';
+  type=false;
+  selectionType='';
   Synonyms = [
     {
       id:0,
@@ -38,4 +41,22 @@ export class SynonymsComponent implements OnInit {
 
   ngOnInit() {}
 
+  selectType(event: any){
+      this.type=!this.type;
+      switch(this.type){
+        case true:{
+          //Acá va lo relacionado con el sinonimo
+          this.selectionType='Sinónimos';
+          break;
+        }
+        case false:{
+          //Acá lo relacionado con el antónimo;
+          this.selectionType='Antónimos';
+          break;
+        }
+      console.log(this.type);
+    }
+  }
+
 }
+

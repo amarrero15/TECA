@@ -1,5 +1,7 @@
 import { Component, OnInit, Output, Input, EventEmitter } from '@angular/core';
 import { Reading } from '../../models/reading';
+import { TechniqueI } from '../../../courses/interfaces/technique-i';
+import { ActivityI } from '../../../courses/interfaces/activity-i';
 
 @Component({
   selector: 'app-reflective-reading',
@@ -20,7 +22,9 @@ export class ReflectiveReadingComponent implements OnInit {
   @Output() keywordsEvent = new EventEmitter<any[]>();
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.textReading.activities);
+  }
 
   ngAfterViewInit(){
   }
@@ -38,7 +42,8 @@ export class ReflectiveReadingComponent implements OnInit {
         if (this.keywords.length < 12){
           this.textSelected = window.getSelection().toString();
           this.keywords.push(this.textSelected);
-          this.textComponent = this.renderText();
+          //this.textComponent = this.renderText();
+          this.textReading.content=this.renderText();
           console.log(this.keywords);
         }
       }

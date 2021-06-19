@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NavParams, PopoverController } from '@ionic/angular';
 import { Chapter } from '../../../../models/chapter';
 import { CourseService } from '../../../../services/course.service';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-create-chapter',
   templateUrl: './create-chapter.component.html',
@@ -11,7 +11,10 @@ import { CourseService } from '../../../../services/course.service';
 export class CreateChapterComponent implements OnInit {
   courseData: any;
   chapterData= new Chapter();
-  constructor(private navParams: NavParams,private popoverController: PopoverController ,private courseService: CourseService) { }
+  constructor(private navParams: NavParams
+    ,private popoverController: PopoverController
+    ,private courseService: CourseService
+    ,private route: Router) { }
 
   ngOnInit() {
     this.courseData=this.navParams.get('data');
@@ -22,6 +25,8 @@ export class CreateChapterComponent implements OnInit {
   save(){
     this.courseService.createChapter(this.chapterData, this.courseData.courseId);
     this.popoverController.dismiss();
+    //this.route.navigate(['/cursos/detalle']);
+    this.route.onSameUrlNavigation;
   }
   cancel(){
     this.popoverController.dismiss();

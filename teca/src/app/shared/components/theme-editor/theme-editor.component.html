@@ -7,7 +7,7 @@
   <ion-row>
     <ion-col>
       <ion-input class="title-input" placeholder="titulo" [(ngModel)]="themeDataInfo.title"></ion-input>
-      <ion-textarea class="content-text-area" [(ngModel)]="themeDataInfo.content"></ion-textarea>
+      <ion-textarea class="content-text-area" [(ngModel)]="themeDataInfo.content" rows="20"></ion-textarea>
     </ion-col>
     <ion-col>
       <ion-button shape="round" color="atomik" class="saveButton" (click)="save()">Guardar</ion-button>

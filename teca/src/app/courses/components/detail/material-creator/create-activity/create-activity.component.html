@@ -11,7 +11,7 @@
     </ion-col>
     <ion-col size="8">
       <ion-item lines="none">
-        <ion-select placeholder="Seleccione un capítulo" (ionChange)="searchThemes($event)">
+        <ion-select placeholder="Seleccione un capítulo" (ionChange)="searchThemes($event)" [(ngModel)]="this.newActivity.chapterId">
           <ion-select-option *ngFor="let chapter of courseData.chapters" [value]="chapter.chapterId">{{chapter.title}}</ion-select-option>
         </ion-select>
       </ion-item>
@@ -23,7 +23,7 @@
     </ion-col>
     <ion-col size="8">
       <ion-item lines="none">
-        <ion-select placeholder="Seleccione un tema">
+        <ion-select placeholder="Seleccione un tema" [(ngModel)]="this.newActivity.themeId">
           <ion-select-option *ngFor="let theme of chapterSelected.themes" [value]="theme.themeId">{{theme.title}}</ion-select-option>
         </ion-select>
       </ion-item>
@@ -32,11 +32,10 @@
   <ion-row>
     <ion-label class="chapter-label">Técnica de Estudio</ion-label>
   </ion-row>
-  <ion-row>
+  <ion-row class="techniqueRow">
     <ion-item lines="none">
-      <ion-select placeholder="Seleccione un capítulo">
-        <ion-select-option value="f">Female</ion-select-option>
-        <ion-select-option value="m">Male</ion-select-option>
+      <ion-select multiple="true" placeholder="Seleccione una técnica de estudio" [(ngModel)]="techniques">   
+        <ion-select-option *ngFor="let technique of activityOptions" [value]="technique">{{technique.name}}</ion-select-option>
       </ion-select>
     </ion-item>
   </ion-row>
@@ -45,13 +44,13 @@
   </ion-row>
   <ion-row>
     <ion-col>
-      <ion-textarea class="activity-textarea"></ion-textarea>
+      <ion-textarea class="activity-textarea" [(ngModel)]="this.newActivity.indications"></ion-textarea>
     </ion-col>
     
   </ion-row>
   <ion-row class="buttons">
-    <ion-button clas="saveButton">Crear</ion-button>
-    <ion-button fill="clear" class="cancelButton">Cancelar</ion-button>
+    <ion-button class="saveButton" (click)="create()">Crear</ion-button>
+    <ion-button fill="clear" class="cancelButton" (click)="cancel()">Cancelar</ion-button>
   </ion-row>
 </ion-grid>
 

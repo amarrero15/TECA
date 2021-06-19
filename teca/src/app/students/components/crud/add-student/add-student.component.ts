@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { StudentsService } from '../../../services/students.service';
 import { Student } from '../../../../models/student';
 import { StudentInfo } from '../../../models/student-info';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-student',
@@ -10,7 +11,7 @@ import { StudentInfo } from '../../../models/student-info';
 })
 export class AddStudentComponent implements OnInit {
   studentsList: any=[];
-  constructor(private studentsService: StudentsService) { }
+  constructor(private studentsService: StudentsService, private route: Router) { }
 
   ngOnInit() {
     this.loadStudents();
@@ -22,7 +23,7 @@ export class AddStudentComponent implements OnInit {
     });
   }
   addMyStudent(student : Student){
-    this.studentsService.addStudent(student).then(res=>{console.log('Funciona')}).catch(err=>console.log(err));
+    this.studentsService.addStudent(student).then(res=>{}).catch(err=>console.log(err));
   }
 
 }

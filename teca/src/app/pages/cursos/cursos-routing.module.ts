@@ -23,6 +23,10 @@ const routes: Routes = [
   {
     path: 'tema',
     loadChildren: () => import('./tema/tema.module').then( m => m.TemaPageModule)
+  },
+  {
+    path: 'temas',
+    loadChildren: () => import('./temas/temas.module').then( m => m.TemasPageModule)
   }
 ];
 

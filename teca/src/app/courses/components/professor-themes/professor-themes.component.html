@@ -4,8 +4,8 @@
       <app-professor-side-bar></app-professor-side-bar>
     </ion-col>
     <ion-col>
-      <app-theme-editor [themeDataInfo]="themeData" (themeEditorEvent)="createTheme($event)"></app-theme-editor>
-      <app-themes-view [chapterData]="themeData"></app-themes-view>
+      <app-theme-editor *ngIf="visibleEditor" [themeDataInfo]="themeData" (themeEditorEvent)="createTheme($event)"></app-theme-editor>
+      <app-themes-view *ngIf="visibleThemes" [chapterData]="themeData.chapterId"></app-themes-view>
     </ion-col>
   </ion-row>
 </ion-grid>

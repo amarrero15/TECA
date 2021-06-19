@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ComparativeChart } from '../../../models/comparative-chart';
 
 @Component({
   selector: 'app-comparative',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comparative.component.scss'],
 })
 export class ComparativeComponent implements OnInit {
+  @Output() comparativeEvent = new EventEmitter();
   TypeSimilar = true;
   TypeDiferences = false;
+  comparativeResponse = new ComparativeChart();
   Frames = 
   { 
     type:"Similitudes",
@@ -45,6 +48,11 @@ export class ComparativeComponent implements OnInit {
     console.log(this.Frames);
     console.log(this.TypeSimilar);
     console.log(this.TypeDiferences);
+  }
+
+  sendResponse(){
+    this.comparativeEvent.emit(this.comparativeResponse);
+
   }
 
 }

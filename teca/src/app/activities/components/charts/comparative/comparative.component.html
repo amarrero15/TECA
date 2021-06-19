@@ -4,7 +4,7 @@
   </ion-row>
   <ion-row style="padding: 0px; margin-left: 10px;">
       <ion-col size="fixed" style="padding: 0px; margin-right: 4px">
-        <ion-checkbox [(ngModel)]="this.TypeSimilar" class="checkbox" (click)="this.onChange1()"></ion-checkbox>
+        <ion-checkbox [(ngModel)]="this.comparativeResponse.type" class="checkbox" (click)="this.onChange1()"></ion-checkbox>
       </ion-col>
       <ion-col size="fixed" style="padding: 0px;margin-right: 85px; align-self: center">
         <ion-label class="type-label">Similitud</ion-label>
@@ -24,10 +24,10 @@
       <ion-row style="padding: 0px">
         <div class="frame-div">
           <ion-row style="padding: 0px;">
-            <div class="frame-input"><ion-input [(ngModel)]="this.Frames.title1"></ion-input></div>
+            <div class="frame-input"><ion-input [(ngModel)]="this.comparativeResponse.title1" (ngModelChange)="sendResponse()"></ion-input></div>
           </ion-row>
           <ion-row style="padding: 0px">
-            <ion-textarea rows="6" class="frame-textarea" [(ngModel)]="this.Frames.text1"></ion-textarea>
+            <ion-textarea rows="6" class="frame-textarea" [(ngModel)]="this.comparativeResponse.text1" (ngModelChange)="sendResponse()"></ion-textarea>
           </ion-row>
         </div>
       </ion-row>
@@ -39,10 +39,10 @@
         <ion-row style="padding: 0px">
           <div class="frame-div">
             <ion-row style="padding: 0px;">
-              <div class="frame-input"><ion-input [(ngModel)]="this.Frames.title2"></ion-input></div>
+              <div class="frame-input"><ion-input [(ngModel)]="this.comparativeResponse.title2" (ngModelChange)="sendResponse()"></ion-input></div>
             </ion-row>
             <ion-row style="padding: 0px">
-              <ion-textarea rows="6" class="frame-textarea" [(ngModel)]="this.Frames.text2"></ion-textarea>
+              <ion-textarea rows="6" class="frame-textarea" [(ngModel)]="this.comparativeResponse.text2" (ngModelChange)="sendResponse()"></ion-textarea>
             </ion-row>
           </div>
         </ion-row>

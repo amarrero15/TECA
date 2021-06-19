@@ -17,6 +17,7 @@ import { CreateThemeComponent } from './components/detail/material-creator/creat
 import { CreateActivityComponent } from './components/detail/material-creator/create-activity/create-activity.component';
 import { FormsModule } from '@angular/forms';
 import { ProfessorThemesComponent } from './components/professor-themes/professor-themes.component';
+import { SubtopicComponent } from './components/subtopic/subtopic.component';
 
 
 
@@ -36,7 +37,8 @@ import { ProfessorThemesComponent } from './components/professor-themes/professo
     , ProfessorCourseComponent
     , ProfessorShareComponent
     , ProfessorThemesComponent
-    , ShareComponent],
+    , ShareComponent
+    , SubtopicComponent],
   exports:[
       ActivateComponent
     , CreateChapterComponent
@@ -51,7 +53,8 @@ import { ProfessorThemesComponent } from './components/professor-themes/professo
     , ProfessorCourseComponent
     , ProfessorShareComponent
     , ProfessorThemesComponent
-    , ShareComponent],
+    , ShareComponent
+    , SubtopicComponent],
   imports: [
       CommonModule
     , IonicModule

@@ -3,6 +3,7 @@ import { PopoverController } from '@ionic/angular';
 import { Course } from '../../models/course';
 import { MaterialsComponent } from './materials/materials.component';
 import { CourseService } from '../../services/course.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -12,7 +13,10 @@ import { CourseService } from '../../services/course.service';
 export class DetailComponent implements OnInit {
   @Input() courseData: Course;
   variable : any;
-  constructor(public popoverController: PopoverController, private courseService: CourseService) { }
+  constructor(
+    private route: Router
+    ,public popoverController: PopoverController
+    , private courseService: CourseService) { }
 
   ngOnInit() {
     console.log(this.courseData);
@@ -32,5 +36,7 @@ export class DetailComponent implements OnInit {
     });
     return await popover.present();
   }
-  openDetail(){}
+  openDetail(chapterId: string){
+    this.route.navigate(['/cursos/temas'], {queryParams:{ chapter: JSON.stringify(chapterId)}});
+  }
 }

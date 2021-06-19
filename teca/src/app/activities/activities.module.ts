@@ -14,12 +14,14 @@ import { SchemeComponent } from './components/schemes/scheme/scheme.component';
 import { TreeComponent } from './components/schemes/tree/tree.component';
 import { BleedingComponent } from './components/schemes/bleeding/bleeding.component';
 import { MapsComponent } from './components/maps/maps/maps.component';
+import { ActivityHeaderComponent } from './components/activity-header/activity-header.component';
 
 
 
 @NgModule({
   declarations: [
     AnalogiesComponent
+    , ActivityHeaderComponent
     , BleedingComponent
     , ChartsComponent
     , ComparativeComponent
@@ -32,6 +34,7 @@ import { MapsComponent } from './components/maps/maps/maps.component';
     , TreeComponent],
   exports: [
     AnalogiesComponent
+    ,ActivityHeaderComponent
     ,BleedingComponent
     , ChartsComponent
     , ComparativeComponent

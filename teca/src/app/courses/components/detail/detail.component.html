@@ -11,7 +11,7 @@
 
   <ion-row>
     <div *ngFor="let chapter of courseData.chapters; let i=index" >
-      <ion-card class="card" (click)="openDetail()">
+      <ion-card class="card" (click)="openDetail(chapter.chapterId)">
         <ion-card-content>
           <ion-card-title class="card-title">{{chapter.title}}</ion-card-title>
           <ion-img class="card-icon" *ngIf="i%4==0" src="assets/svg/courses/chapters/color1.svg"></ion-img>

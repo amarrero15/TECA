@@ -102,16 +102,18 @@ export class CourseService {
         activity.activityId=this.db.createId();
         this.db.collection('activities').doc(activity.activityId).set({
           activityId:activity.activityId,
+          chapterIdo:activity.chapterId,
           themeId:activity.themeId,
           indications:activity.indications,
-          title:activity.technique,
+          technique:activity.technique,
         }).then(activityCreated=>{
           const data: ActivityI={
             activityId:activity.activityId,
             technique:activity.technique,
           }
           this.db.collection('themes').doc(activity.themeId).update({
-            activities: firebase.default.firestore.FieldValue.arrayUnion(data)
+            //activities: firebase.default.firestore.FieldValue.arrayUnion(data)
+            activities: data
           });
           resolve(activityCreated);
         }).catch(err=>rejected(err));
@@ -167,6 +169,19 @@ export class CourseService {
 
 
   addStudentCourse(students: CourseStudent[], ){
+  }
+
+  //Revisar la promesa y su actualización
+  
+  updateTheme(theme: Theme){
+    return new Promise((resolve, rejected)=>{
+      this.AFauth.currentUser.then(res=>{
+        this.db.collection('themes').doc(theme.themeId).update({
+          content:theme.content
+        });
+        resolve(theme);
+      })
+    })
   }
 
 }
