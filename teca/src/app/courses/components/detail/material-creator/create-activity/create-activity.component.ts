@@ -4,7 +4,7 @@ import { Chapter } from 'src/app/courses/models/chapter';
 import { CourseService } from '../../../../services/course.service';
 import { Activity } from '../../../../models/activity';
 import { TechniqueI } from '../../../../interfaces/technique-i';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-create-activity',
   templateUrl: './create-activity.component.html',
@@ -47,11 +47,27 @@ export class CreateActivityComponent implements OnInit {
       "name": "Sinónimos y antónimos",
       "value": "sinonimos",
     },
+    {
+      "src": "assets/svg/charts/keys.svg",
+      "name": "Esquema de llaves",
+      "value": "llaves",
+    },
+    {
+      "src": "assets/svg/charts/mental.svg",
+      "name": "Mapa mental",
+      "value": "mental",
+    },
+    {
+      "src": "assets/svg/charts/conceptual.svg",
+      "name": "Mapa conceptual",
+      "value": "conceptual",
+    },
   ];
   constructor(
       private navParams: NavParams
     , private popoverController: PopoverController
-    , private courseService: CourseService) { }
+    , private courseService: CourseService
+    , private route: Router) { }
 
   ngOnInit() {
     this.courseData=this.navParams.get('data');
@@ -77,9 +93,11 @@ export class CreateActivityComponent implements OnInit {
   create(){
     this.newActivity.technique=this.techniques;
     console.log(this.techniques);
+    this.newActivity.courseId=this.courseData.courseId;
     this.courseService.createActivity(this.newActivity).then(res=>{
       console.log('Funcionó');
       this.popoverController.dismiss();
+      this.route.navigate(['/cursos/actividades']);
     }).catch(err=>console.log(err));
   }
 

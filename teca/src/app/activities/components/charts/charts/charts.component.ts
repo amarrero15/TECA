@@ -1,7 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit} from '@angular/core';
+import { AlertController } from '@ionic/angular';
 import { Synonym } from 'src/app/activities/models/synonym';
 import { Analogy } from '../../../models/analogy';
 import { ComparativeChart } from '../../../models/comparative-chart';
+import { Mnemonic } from '../../../models/mnemonic';
+import { ActivityService } from '../../../services/activity.service';
 
 @Component({
   selector: 'app-charts',
@@ -17,7 +20,9 @@ export class ChartsComponent implements OnInit {
   visibleComparative=false;
   visibleSynonyms=false;
   visibleMnemonics=false;
-  constructor() { }
+  constructor(
+    public alertController: AlertController
+    , private activityService: ActivityService) { }
 
   ngOnInit() {
     console.log('Este es el cuadro que selecciioné');
@@ -48,17 +53,48 @@ export class ChartsComponent implements OnInit {
         this.visibleMnemonics=false;
         break;
       }
+      case 'mnemotecnia':{
+        this.visibleMnemonics=true;
+        this.visibleSynonyms=false;
+        this.visibleComparative=false;
+        this.visibleAnalogies = false;
+        break;
+      }
     }
   }
 
   saveActivity(){
-    console.log(this.response );
+    //console.log('Prueba');
+    switch(this.activitySelected){
+      case 'analogía':{
+        this.activityService.createAnalogy(this.response);
+        this.presentAlert();
+        break;
+      }
+      case 'comparativo':{
+        this.activityService.createComparative
+     
+        break;
+      }
+      case 'sinonimos':{
+        this.activityService.createSynonyms
+
+     
+        break;
+      }
+      case 'mnemotecnia':{
+        this.activityService.createMnemonic
+        break;
+      }
+    }
   }
 
   saveResponse(event: any){
     switch(this.activitySelected){
-      case 'analogías':{
+      case 'analogía':{
         this.response = event as Analogy;
+        console.log('Esta es la respuesta enviada aplicando casting');
+        console.log(this.response.responses);
        
         break;
       }
@@ -72,7 +108,26 @@ export class ChartsComponent implements OnInit {
      
         break;
       }
+      case 'mnemotecnia':{
+        this.response = event as Mnemonic;
+        break;
+      }
     }
+  }
+
+  async presentAlert() {
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Actividad enviada',
+      subHeader: 'Envío exitoso',
+      message: 'Actividad enviada a revisión',
+      buttons: ['Aceptar']
+    });
+
+    await alert.present();
+
+    const { role } = await alert.onDidDismiss();
+    console.log('onDidDismiss resolved with role', role);
   }
 
 

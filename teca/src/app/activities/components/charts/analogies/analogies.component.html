@@ -2,7 +2,7 @@
   <ion-content class="content">
     <ion-row style="height: 100%; justify-content: center">
     <div class="analogyView">
-      <ion-row  *ngFor="let analogy of Analogies ; let i = index">
+      <ion-row  *ngFor="let analogy of activityResponse.responses ; let i = index">
         <div  class="box" style="position: relative">
             
           <ion-fab vertical="bottom" horizontal="end" style="right: 10px; bottom: -10px">
@@ -15,7 +15,7 @@
             <ion-col style="align-self: center">
               <ion-row style="justify-content: center">
                 <div>
-                  <ion-textarea [(ngModel)]="this.Analogies[i].text1" class="analogie-input"></ion-textarea>
+                  <ion-textarea [(ngModel)]="this.activityResponse.responses[i].premise" class="analogie-input"></ion-textarea>
                 </div>
               </ion-row>
             </ion-col>
@@ -29,7 +29,7 @@
             <ion-col style="align-self: center"> 
               <ion-row style="justify-content: center">
                 <div>
-                  <ion-textarea [(ngModel)]="this.Analogies[i].text2" class="analogie-input"></ion-textarea>
+                  <ion-textarea [(ngModel)]="this.activityResponse.responses[i].alternative" class="analogie-input"></ion-textarea>
                 </div>
               </ion-row>
             </ion-col>

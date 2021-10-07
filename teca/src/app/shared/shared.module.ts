@@ -16,13 +16,15 @@ import { ReflectiveReadingComponent } from './components/reflective-reading/refl
 import { StartActivityComponent } from './components/activity/start-activity/start-activity.component';
 import { CreateChartComponent } from './components/activity/create-chart/create-chart.component';
 import { KeywordsComponent } from './components/activity/keywords/keywords.component';
+import { ActivitiesViewComponent } from './components/activity/activities-view/activities-view.component';
 
 
 
 
 @NgModule({
   declarations: [
-      BannerComponent
+    ActivitiesViewComponent
+    , BannerComponent
     , CreateChartComponent
     , KeywordsComponent
     , ProfessorSideBarComponent
@@ -38,7 +40,8 @@ import { KeywordsComponent } from './components/activity/keywords/keywords.compo
     , ThemeEditorComponent
     , ThemesViewComponent],
   exports:[
-      BannerComponent
+    ActivitiesViewComponent
+    , BannerComponent
     , CreateChartComponent
     , KeywordsComponent
     , ProfessorSideBarComponent

@@ -35,6 +35,7 @@ export class DetailComponent implements OnInit {
       translucent: true
     });
     return await popover.present();
+    
   }
   openDetail(chapterId: string){
     this.route.navigate(['/cursos/temas'], {queryParams:{ chapter: JSON.stringify(chapterId)}});

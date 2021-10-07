@@ -48,7 +48,7 @@ export class CourseService {
       }).catch(err=>{rejected(err)});
     });
   }
-
+  //Create a new Chapter
   createChapter(chapter: Chapter, courseId: string){
     return new Promise((resolve, rejected)=>{
       this.AFauth.currentUser.then(res=>{
@@ -72,7 +72,7 @@ export class CourseService {
       });
     });
   }
-
+  //Create a new Theme
   createTheme(theme: Theme){
     return new Promise((resolve, rejected)=>{
       this.AFauth.currentUser.then(res=>{
@@ -95,7 +95,7 @@ export class CourseService {
       });
     });
   }
-
+  //Create a new Activity
   createActivity(activity: Activity){
     return new Promise((resolve, rejected)=>{
       this.AFauth.currentUser.then(res=>{
@@ -106,6 +106,8 @@ export class CourseService {
           themeId:activity.themeId,
           indications:activity.indications,
           technique:activity.technique,
+          professorId: res.uid,
+          courseId:activity.courseId
         }).then(activityCreated=>{
           const data: ActivityI={
             activityId:activity.activityId,
@@ -115,12 +117,13 @@ export class CourseService {
             //activities: firebase.default.firestore.FieldValue.arrayUnion(data)
             activities: data
           });
+
           resolve(activityCreated);
         }).catch(err=>rejected(err));
       });
     });
   }
-
+  //Get all courses of the system
   getCourses() {
     return this.db.collection('courses').snapshotChanges().pipe(map(courses=>{
       return courses.map(course=>{
@@ -130,7 +133,7 @@ export class CourseService {
       });
     }));
   }
-
+  //ProfessorCourses (Review this courses)
   getMyCourses(){
     return new Promise((resolve, rejected)=>{
       this.AFauth.currentUser.then(res=>{
@@ -163,9 +166,11 @@ export class CourseService {
     });
   }
 
+  
   async getChapter(chapterId: string){
     return this.db.collection('chapters').doc<Chapter>(chapterId).get().toPromise();
   }
+  
 
 
   addStudentCourse(students: CourseStudent[], ){

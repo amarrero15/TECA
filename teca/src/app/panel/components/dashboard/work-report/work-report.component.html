@@ -1,7 +1,7 @@
 <ion-grid class="principal">
   <ion-row>
     <ion-col size="auto">
-      <ion-card color="green" class="card">
+      <ion-card color="green" class="card" (click)="goTo('estudiantes')">
         <ion-item lines="none" color="green" >
           <ion-icon id="studentsIcon" slot="start"></ion-icon>
           <ion-card-header class="cardheader">
@@ -13,7 +13,7 @@
     </ion-col>
 
     <ion-col size="auto">
-      <ion-card color="red" class="card">
+      <ion-card color="red" class="card" (click)="goTo('actividades')">
         <ion-item lines="none" color="red">
           <ion-icon id="activitiesIcon" slot="start"></ion-icon>
           <ion-card-header class="cardheader">
@@ -25,7 +25,7 @@
     </ion-col>
 
     <ion-col size="auto">
-      <ion-card color="purple" class="card">
+      <ion-card color="purple" class="card" (click)="goTo('cursos')">
         <ion-item lines="none" color="purple">
           <ion-icon id="coursesIcon" slot="start"></ion-icon>
           <ion-card-header class="cardheader">

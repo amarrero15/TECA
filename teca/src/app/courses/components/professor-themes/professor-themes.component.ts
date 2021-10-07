@@ -1,7 +1,9 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CourseService } from '../../services/course.service';
+import { PopoverController } from '@ionic/angular';
 import { Theme } from '../../models/theme';
 import { Chapter } from '../../models/chapter';
+import { CreateThemeComponent } from '../detail/material-creator/create-theme/create-theme.component';
 @Component({
   selector: 'app-professor-themes',
   templateUrl: './professor-themes.component.html',
@@ -12,7 +14,9 @@ export class ProfessorThemesComponent implements OnInit {
   public visibleThemes = false;
   @Input() themeData: Theme;
   values: any;
-  constructor( private courseService: CourseService) {
+  constructor(
+    private courseService: CourseService
+    , public popoverController: PopoverController) {
    }
 
   ngOnInit() {

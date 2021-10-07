@@ -14,6 +14,7 @@ export class SubtopicComponent implements OnInit {
   themeSelected= new Theme();
   myKeywords: any[];
   @Input() chapterId:any;
+  activityType:string ='';
   constructor(private route: Router) { }
 
   ngOnInit() {}
@@ -26,11 +27,14 @@ export class SubtopicComponent implements OnInit {
 
   goToActivity(event: any){
     //this.route.navigate(['/actividades'], );
+    console.log(this.activityType);
+    this.selectActivityType(event);
     this.route.navigate(['/actividades'], {
       queryParams:{ 
       activity: JSON.stringify(this.themeSelected.activities.activityId),
       chartSelected: JSON.stringify(event),
-      keywords:JSON.stringify(this.myKeywords)
+      keywords:JSON.stringify(this.myKeywords),
+      activityType: JSON.stringify(this.activityType),
     }});
   }
 
@@ -42,6 +46,47 @@ export class SubtopicComponent implements OnInit {
     console.log('Estas son las keyword en el modelo');
     //this.goToActivity();
     //console.log(this.newTheme.keyword);
+  }
+  
+  selectActivityType(event: any){
+    switch(event){
+      case 'analogías':{
+        this.activityType="charts"
+        break;
+      }
+      case 'comparativo':{
+        this.activityType="charts"
+        break;
+      }
+      case 'sinonimos':{
+        this.activityType="charts"
+        break;
+      }
+      case 'mnemotecnia':{
+        this.activityType="charts"
+        break;
+      }
+      case 'llaves':{
+        this.activityType="schemes"
+        break;
+      }
+      case 'sangrado':{
+        this.activityType="schemes"
+        break;
+      }
+      case 'arbol':{
+        this.activityType="schemes"
+        break;
+      }
+      case 'mental':{
+        this.activityType="maps"
+        break;
+      }
+      case 'conceptual':{
+        this.activityType="schemes"
+        break;
+      }
+    }
   }
 
 

@@ -5,12 +5,19 @@ import { IonicModule } from '@ionic/angular';
 import { PipesModule } from '../pipes/pipes.module';
 import { ScoresComponent } from './components/scores/scores.component';
 import { SharedModule } from '../shared/shared.module';
+import { ResponsesComponent } from './components/responses/responses.component';
 
 
 
 @NgModule({
-  declarations: [ScoresComponent,ScoreTableComponent],
-  exports: [ScoresComponent,ScoreTableComponent],
+  declarations: [
+    ResponsesComponent
+    ,ScoresComponent
+    ,ScoreTableComponent,],
+  exports: [
+    ResponsesComponent
+    ,ScoresComponent
+    ,ScoreTableComponent],
   imports: [
     CommonModule
     ,IonicModule

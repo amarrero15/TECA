@@ -3,6 +3,9 @@ import {AngularFireAuth} from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Activity } from 'src/app/courses/models/activity';
 import { Analogy } from '../models/analogy';
+import { Synonym } from '../models/synonym';
+import { ComparativeChart } from '../models/comparative-chart';
+import { Mnemonic } from '../models/mnemonic';
 @Injectable({
   providedIn: 'root'
 })
@@ -20,4 +23,9 @@ export class ActivityService {
       responses: analogy.responses
     })
   }
+  createSynonyms(synonyms: Synonym){
+
+  }
+  createComparative(comparative: ComparativeChart){}
+  createMnemonic(mnemonic:Mnemonic){}
 }

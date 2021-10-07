@@ -13,8 +13,10 @@ export class StudentEditComponent implements OnInit {
   ngOnInit() {}
 
   updateProfile(){
+    /*
     this.settingsService.updateStudentProfile(this.studentInfo).then(res=>{
       //Acá va un alert oun popopver
     }).catch(err=>console.log(err));
+    */
   }
 }

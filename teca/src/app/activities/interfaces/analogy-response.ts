@@ -1,5 +1,5 @@
 export interface AnalogyResponse {
-    id:string;
+    id:number;
     premise:string;
     alternative:string;
 }

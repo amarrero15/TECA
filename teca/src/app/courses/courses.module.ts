@@ -18,6 +18,8 @@ import { CreateActivityComponent } from './components/detail/material-creator/cr
 import { FormsModule } from '@angular/forms';
 import { ProfessorThemesComponent } from './components/professor-themes/professor-themes.component';
 import { SubtopicComponent } from './components/subtopic/subtopic.component';
+import { ProfessorActivitiesComponent } from './components/professor-activities/professor-activities.component';
+import { ActivityEditorComponent } from './components/detail/material-creator/activity-editor/activity-editor.component';
 
 
 
@@ -25,6 +27,7 @@ import { SubtopicComponent } from './components/subtopic/subtopic.component';
 @NgModule({
   declarations: [
       ActivateComponent
+    , ActivityEditorComponent  
     , CreateChapterComponent
     , CreateThemeComponent
     , CreateActivityComponent
@@ -34,6 +37,7 @@ import { SubtopicComponent } from './components/subtopic/subtopic.component';
     , MaterialsComponent
     , MyCoursesComponent
     , ProfessorActivateComponent
+    , ProfessorActivitiesComponent
     , ProfessorCourseComponent
     , ProfessorShareComponent
     , ProfessorThemesComponent
@@ -41,6 +45,7 @@ import { SubtopicComponent } from './components/subtopic/subtopic.component';
     , SubtopicComponent],
   exports:[
       ActivateComponent
+    , ActivityEditorComponent
     , CreateChapterComponent
     , CreateThemeComponent
     , CreateActivityComponent
@@ -50,6 +55,7 @@ import { SubtopicComponent } from './components/subtopic/subtopic.component';
     , MaterialsComponent
     , MyCoursesComponent
     , ProfessorActivateComponent
+    , ProfessorActivitiesComponent
     , ProfessorCourseComponent
     , ProfessorShareComponent
     , ProfessorThemesComponent

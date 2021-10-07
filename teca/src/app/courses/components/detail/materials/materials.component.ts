@@ -29,7 +29,10 @@ export class MaterialsComponent implements OnInit {
           translucent: true
           
         });
+        
         return await popover.present();
+        
+        
       }
       case 'theme':{
         const popover = await this.popoverController.create({
@@ -41,7 +44,9 @@ export class MaterialsComponent implements OnInit {
           event: value,
           translucent: true
         });
+        
         return await popover.present();
+        
       }
       default:{
         const popover = await this.popoverController.create({
@@ -53,9 +58,14 @@ export class MaterialsComponent implements OnInit {
           event: value,
           translucent: true
         });
+        
         return await popover.present();
+        
+        
       } 
+      
     }
+    
   }
 
 

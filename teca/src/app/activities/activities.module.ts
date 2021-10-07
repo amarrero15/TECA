@@ -15,6 +15,8 @@ import { TreeComponent } from './components/schemes/tree/tree.component';
 import { BleedingComponent } from './components/schemes/bleeding/bleeding.component';
 import { MapsComponent } from './components/maps/maps/maps.component';
 import { ActivityHeaderComponent } from './components/activity-header/activity-header.component';
+import { KeysComponent } from './components/schemes/keys/keys.component';
+import { KeyComponent } from './components/schemes/key/key.component';
 
 
 
@@ -26,12 +28,15 @@ import { ActivityHeaderComponent } from './components/activity-header/activity-h
     , ChartsComponent
     , ComparativeComponent
     , ConceptualComponent
+    , KeyComponent
+    , KeysComponent
     , MapsComponent
     , MentalComponent
     , MnemonicsComponent
     , SchemeComponent
     , SynonymsComponent
-    , TreeComponent],
+    , TreeComponent
+    ],
   exports: [
     AnalogiesComponent
     ,ActivityHeaderComponent
@@ -39,12 +44,15 @@ import { ActivityHeaderComponent } from './components/activity-header/activity-h
     , ChartsComponent
     , ComparativeComponent
     , ConceptualComponent
+    , KeyComponent
+    , KeysComponent
     , MapsComponent
     , MentalComponent
     , MnemonicsComponent
     , SchemeComponent
     , SynonymsComponent
-    , TreeComponent],
+    , TreeComponent
+  ],
   imports: [
       CommonModule
     , IonicModule

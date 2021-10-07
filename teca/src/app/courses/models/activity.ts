@@ -6,5 +6,7 @@ export class Activity {
         public themeId:string='',
         public technique:TechniqueI[]=[],
         public indications:string='',
+        public professorId:string='',
+        public courseId:string=''
     ){}
 }

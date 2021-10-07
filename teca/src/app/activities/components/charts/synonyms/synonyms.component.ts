@@ -43,6 +43,7 @@ export class SynonymsComponent implements OnInit {
 
   selectType(event: any){
       this.type=!this.type;
+      console.log(this.type);
       switch(this.type){
         case true:{
           //Acá va lo relacionado con el sinonimo

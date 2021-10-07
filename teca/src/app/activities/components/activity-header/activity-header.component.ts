@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./activity-header.component.scss'],
 })
 export class ActivityHeaderComponent implements OnInit {
-  @Input() activityName: string ='Activity';
+  @Input() activityName: string ='Actividad';
   @Input() activityIndications: string ='This is a an example of activity indications';
   constructor() { }
 
