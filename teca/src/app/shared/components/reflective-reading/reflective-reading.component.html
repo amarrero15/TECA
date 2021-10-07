@@ -1,0 +1,52 @@
+<ion-grid class="principal">
+  <ion-row>
+
+  </ion-row>
+
+  <ion-row>
+    <div class="title-content">
+      <ion-label class="path-title" text-wrap>{{subject}}</ion-label>
+      <ion-icon src="assets/icon/practice/arrow-right.svg" class="icon"></ion-icon>
+      <ion-label class="path-title" text-wrap>{{theme}}</ion-label>
+      <ion-icon src="assets/icon/practice/arrow-right.svg" class="icon"></ion-icon>
+      <ion-label class="path-title-final" text-wrap>{{textReading.title}}</ion-label>
+    </div>
+  </ion-row>
+
+  <ion-row>
+    <div class="indications-content">
+      <ion-row>
+        <ion-label class="indications-title">Indicaciones:</ion-label>
+      </ion-row>
+      <ion-row>
+        <ion-label class="indications-text">{{indications}}</ion-label>
+      </ion-row>
+    </div>
+  </ion-row>
+
+  <ion-row>
+    <div class="reading-content">
+      <ion-content >
+        <ion-text class="reading" (mouseup)="showSelectedText()" [innerHTML]="renderText()">
+          
+        </ion-text>
+      </ion-content>
+    </div>
+  </ion-row>
+  <div class="segments-content">
+    <div class="segments">
+      <ion-button fill="clear" color="#6F9CD6" class="first-segment-button" (click)="useMarker()">
+        <ion-icon class="marker-icon" src="assets/icon/reading/marcador.svg"></ion-icon>
+      </ion-button>
+      <ion-button fill="clear" color="#6F9CD6" class="second-segment-button">
+        <ion-icon class="go-icon" src="assets/icon/reading/go-forward.svg"></ion-icon>
+      </ion-button> 
+      <ion-button fill="clear" color="#6F9CD6" class="third-segment-button" (click)="undo()">
+        <ion-icon class="go-icon" src="assets/icon/reading/go-back.svg"></ion-icon>
+      </ion-button>
+    </div>
+  </div>
+    <ion-button shape="round" class="start-button" (click)=goToActivity()>
+      <ion-label text-capitalize class="start-button-label">Iniciar actividad</ion-label>
+    </ion-button>
+</ion-grid>

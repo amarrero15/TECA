@@ -1,0 +1,9 @@
+<ion-content class="principal">
+  <ion-grid class="principal">
+    <app-charts [keywords]="activitykeywords" [activity]="myActivity" [activitySelected]="data" *ngIf="visibleCharts"></app-charts>
+    <app-scheme [keywords]="activitykeywords" [activity]="myActivity" [activitySelected]="data" *ngIf="visibleSchemes"></app-scheme>
+    <!--
+    <app-maps></app-maps>
+    -->
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,76 @@
+.principal {
+    width: 749px;
+    height: 334px;
+    background: #FFFFFF;
+    border: 1px solid rgba(67, 87, 191, 0.5);
+    box-sizing: border-box;
+    box-shadow: 0px 6px 8px rgba(111, 156, 214, 0.45);
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 11.00546875vw;
+    margin-bottom: 20px;
+}
+.second-principal {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+.title {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    color: #334D6E;    
+}
+.keys {
+    height: 100px;
+}
+.main-idea-label {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #5570FF;    
+}
+.secondary-idea-text {
+    width: 356px;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #334D6E;
+}
+.buttons {
+    width: 20px;
+    height: 20px;
+    padding: 0px;  
+    --background: #FF9F00;
+    border-radius: 100%;
+    --box-shadow: 0px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+.main-idea-input {
+    padding: 0%;
+    height: 23px;
+    background: #FFFFFF;
+    border: 1px solid #FF9F00;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.secondary-idea-input {
+    padding: 0%;
+    height: 60px;
+    background: #FFFFFF;
+    border: 1px solid #FF9F00;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.keyUp{
+    height: auto;
+}

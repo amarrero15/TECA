@@ -1,0 +1,45 @@
+.principal{
+    padding: 0px;
+}
+.title{
+    margin-top: 9.453125vh;
+    margin-left: 7.958559375vw;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.34375vw;
+    color: #5570FF;
+}
+.subtitle{
+    margin-left: 0.703125vw;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.875vw;
+    color: #5570FF;
+}
+.optionsRow{
+    margin-left: 9.83359375vw;
+    //margin-right: 27.1875vw;
+}
+.optionItem{
+    width: 44.21875vw;
+}
+.options{
+    margin-left: 0.703125vw;
+    margin-right: 31.484375vw;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.25vw;
+    color: #334D6E;
+}
+.item #arrowIcon {
+    content: url("../../../../../assets/icon/settings/arrow.svg");
+}
+.item #notificationIcon {
+    content: url("../../../../../assets/icon/settings/notification.svg");
+}
+.item #userIcon {
+    content: url("../../../../../assets/icon/settings/userAccount.svg");
+}

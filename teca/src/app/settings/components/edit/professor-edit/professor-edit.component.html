@@ -1,0 +1,75 @@
+<ion-grid>
+  <ion-row>
+    <ion-item>
+      <ion-icon></ion-icon>
+      <ion-label>Editar Perfil</ion-label>
+    </ion-item>
+  </ion-row>
+  <ion-row>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Nombre Completo</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="professorInfo.nombre"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Fecha de Nacimiento</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-datetime [(ngModel)]="professorInfo.fechaNacimiento"></ion-datetime>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Especialidad</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-input type="text" [(ngModel)]="professorInfo.especialidad"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Correo Electrónico</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-input type="email" [(ngModel)]="professorInfo.email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>Contraseña</ion-label>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item>
+            <ion-input type="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-row>
+  <ion-row>
+    <ion-button shape="round" color="atomik" (click)="updateProfile()">Guardar cambios</ion-button>
+  </ion-row>
+</ion-grid>

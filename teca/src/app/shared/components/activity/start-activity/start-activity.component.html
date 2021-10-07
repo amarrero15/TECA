@@ -1,0 +1,31 @@
+
+  <ion-grid class="principal">
+    <ion-row>
+        <div size="fixed" float-right style="margin-left: auto; margin-top: 20px;">
+          <!--
+          <app-top-notifications-bar></app-top-notifications-bar>
+          -->
+        </div>
+      </ion-row>
+    <ion-row>
+        <ion-col>
+          <div class="title-content">
+            <ion-icon class ="icon" src="assets/icon/practice/arrow-left.svg"></ion-icon>
+            <ion-label class="title" text-wrap>Iniciar actividad</ion-label>
+          </div>
+        </ion-col>
+      </ion-row> 
+    <ion-row>
+        <app-keywords [Keywords]="keywordsActivity" class="keywords-component"></app-keywords>
+    </ion-row>
+    <ion-row>
+        <app-create-chart class="create-chart-component" [activityOptions]="activities" (charSelectedEvent)=loadChart($event)></app-create-chart>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+          <ion-button float-end shape="round" class="start-button" (click)="goToActivity()">
+              <ion-label text-capitalize class="start-button-label">Iniciar actividad</ion-label>
+            </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>

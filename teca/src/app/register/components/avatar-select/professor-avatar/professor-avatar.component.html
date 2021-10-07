@@ -1,0 +1,15 @@
+<ion-grid>
+  <ion-row>
+    <ion-col class="mensaje">
+      <ion-label>{{mensaje}}</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row >
+    <ion-col>
+      <app-woman-avatar comando="Comencemos" (newWomanEvent)="create($event)" *ngIf="this.visibleFemenino"></app-woman-avatar>
+      <app-man-avatar comando="Comencemos" (newManEvent)="create($event)" *ngIf="this.visibleMasculino"></app-man-avatar>
+    </ion-col>
+  </ion-row>
+
+</ion-grid>

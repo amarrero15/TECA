@@ -1,0 +1,41 @@
+.principal{
+    width: 22.265625vw;
+    height: 100%;
+    background: #F1F9FF;
+    padding: 0px;
+}
+.image{
+    margin-top: 9vh;
+    margin-left: 6.5625vw;
+    margin-right: 6.5625vw;
+}
+.avatar{
+    width: 7.8125vw;
+    height: 12.5vh;
+    border-style: solid;
+    border-color: #5570FF;
+    border-radius: 15px;
+}
+.nameSpace{
+    margin-top: 6.5vh;
+}
+.name{
+    font-family: Muli;
+    color: #334D6E;
+}
+.personal{
+    margin-top: 3.375vh;
+}
+.reminder{
+    margin-top: 5.625vh;
+}
+.logout{
+    margin-top: 7.47625vh;
+}
+.logoutText{
+    font-family: Muli;
+    color: #334D6E;
+}
+.item #logoutIcon {
+    content: url('../../../../../assets/svg/profilebar/logout.svg');
+ }

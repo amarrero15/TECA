@@ -1,0 +1,46 @@
+<div class="principal">
+  <ion-content style="height: 100%; width:100%">
+    <ion-row>
+      <div class="central-theme-div">
+        <ion-label class="central-theme-label">{{CentralTheme}}</ion-label>
+      </div>
+    </ion-row>
+    <ion-row *ngFor="let leaf of Leaves ; let i = index" style="margin-top: 15px;position: relative;">
+      <div class="text-div" style.margin-left="{{(i*30+30)}}px" style="position: relative">
+        <ion-img src="assets/svg/activities/pointed-leaf.svg" style="position:absolute; left: -13px; top:-15px;"></ion-img>
+        <ion-textarea class="text-label" [ngClass]="{'bold':leaf.bold,'italic':leaf.italic,'underline':leaf.underline}">{{leaf.text}}</ion-textarea>
+      </div>
+    </ion-row>
+    <ion-row style="margin-top: 20px;position: relative;">
+      <div style.margin-left="{{(this.Leaves.length*30+30)}}px" style="position: relative">
+        <ion-img src="assets/svg/activities/pointed-leaf.svg" style="position:absolute; left: -13px; top:-15px;"></ion-img>
+        <ion-textarea rows="3" [(ngModel)]="this.newLeaf.text" [ngClass]="{'input':true,'bold':this.newLeaf.bold,'italic':this.newLeaf.italic,'underline':this.newLeaf.underline}" >
+          <div class="font-options-div" style="position: absolute; right: 15px; top: -15px;">
+            <ion-row>
+              <ion-col>
+                <button class="font-buttons" (click)="setBold()">
+                  <ion-label class="button-bold">N</ion-label>
+                </button>
+              </ion-col>
+              <ion-col>   
+                <button class="font-buttons" (click)="setItalic()">
+                  <ion-label class="button-italic">K</ion-label>
+                </button>
+              </ion-col>
+              <ion-col>
+                <button class="font-buttons" (click)="setUnderline()">
+                  <ion-label class="button-underline">S</ion-label>
+                </button>
+              </ion-col>
+              <ion-col>
+                <button class="font-buttons" (click)="addLeaf()">
+                  <ion-icon name="add" style="font-size: 16px; font-weight: 800; color: white"></ion-icon>
+                </button>
+              </ion-col>
+            </ion-row>
+          </div>
+        </ion-textarea>
+      </div>
+    </ion-row>
+  </ion-content>
+</div>

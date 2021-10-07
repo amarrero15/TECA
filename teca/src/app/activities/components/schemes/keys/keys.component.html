@@ -1,0 +1,125 @@
+
+<div class="principal">
+  <ion-content>
+  <div class="second-principal">
+    <ion-row style="height: 100%; width:100%;">
+      <!--En esta columna se coloca el nombre del Esquema-->
+      <ion-col size="2" style="align-self: center">
+        <ion-row  style="height: 100%; width:100%; justify-content: center">
+          <div>
+            <ion-label class="title">{{TituloDeDocumento}}</ion-label>
+          </div>
+        </ion-row>
+      </ion-col>
+      <!--Vector llave superior e inferior primer nivel del Esquema-->
+      <ion-col size="10">
+        <ion-row style="height: 100%; ">
+          <ion-col #P_KEYS size="1" style="align-self: center">
+              <div>
+                <ion-row>
+                  <ion-img src="assets/svg/activities/key-up.svg" ></ion-img>
+                </ion-row>
+                <ion-row >
+                    <ion-img src="assets/svg/activities/key-down.svg" ></ion-img>
+                </ion-row>
+              </div>
+          </ion-col>
+
+          <!--Ideas principales-->
+          <ion-col #IDEAS size="11" style="height: 100%">
+            <!--Ciclo para visualizar-->
+            <ion-row *ngFor="let mainIdea of MainIdeas ; let i = index" style="height: 33%;">
+              <!--Texto de la idea principal-->
+                <ion-col size="3" style="align-self: center" >
+                  <ion-label class="main-idea-label">{{mainIdea.text}}</ion-label>
+                </ion-col>
+                <!--Llaves para ideas secundarias-->
+                <ion-col size="1" style="align-self: center">
+                  <div>
+                    <ion-row >
+                      <ion-img src="assets/svg/activities/small-key-up.svg"></ion-img>
+                    </ion-row>
+                    <ion-row >
+                        <ion-img src="assets/svg/activities/small-key-down.svg"></ion-img>
+                    </ion-row>
+                  </div>
+                </ion-col>
+                <!--Texto idea secundaria-->
+                <ion-col size="7" style="align-self: center">
+                  <ion-row>
+                    <ion-text class="secondary-idea-text">{{mainIdea.secondary}}</ion-text>
+                  </ion-row>
+                </ion-col>
+
+            </ion-row>
+
+            <!--Posee una variable para mostrar si se está editando la palabra-->
+            <ion-row *ngIf="this.showForInput()" >
+
+                <ion-col size="3" style="align-self: center" >
+
+                  <!--Este label se muestra  si se agregó el botton add-->
+                  <ion-label *ngIf="!this.ShowMainInput" class="main-idea-label">{{MainIdeaToAdd}}</ion-label>
+                  
+                  <!--Input para agregar la idea principal-->
+                  <div *ngIf="this.ShowMainInput" style="display: inline-block;margin-top: 10px; margin-bottom: 10px">
+                   <!--Input idea principal-->
+                    <ion-row style="justify-content: center">
+                      <div class="main-idea-input">
+                        <ion-input [(ngModel)]="MainIdeaToAdd" class="main-idea-input" placeholder="Idea principal"></ion-input>
+                      </div>
+                    </ion-row>
+                    <!--Botón add para idea principal-->
+                    <ion-row style="justify-content:flex-end;" >
+                      <ion-fab-button class="buttons" (click)="addMainIdea()">
+                        <ion-icon style="color:white; padding: 0px;font-size: 20px;" name="add"></ion-icon>
+                      </ion-fab-button>
+                    </ion-row>
+                  </div>
+                </ion-col>
+
+                <!--Sección ideas secundarias-->
+                <ion-col size="1" style="align-self: center">
+                  <!--Vectores llaves secundarias-->
+                  <div>
+                    <ion-row >
+                      <ion-img src="assets/svg/activities/small-key-up.svg"></ion-img>
+                    </ion-row>
+                    <ion-row >
+                        <ion-img src="assets/svg/activities/small-key-down.svg"></ion-img>
+                    </ion-row>
+                  </div>
+                </ion-col>
+                <ion-col size="7">
+                  <!--Text area idea secundaria para editar-->
+                  <div style="display: inline-block;margin-top: 10px; margin-bottom: 10px ; width: 100%;">
+                    <ion-row style="justify-content: center; width: 100%;">
+                      <div style="width: 100%;">
+                        <ion-textarea [(ngModel)]="SecondaryIdeaToAdd" class="secondary-idea-input" placeholder="Idea secundaria"></ion-textarea  >
+                      </div>
+                    </ion-row>
+                    <!--Add Button-->
+                    <ion-row style="justify-content:flex-end;" >
+                      <ion-fab-button class="buttons" (click)="addSecondaryIdea()">
+                        <ion-icon style="color:white; padding: 0px;font-size: 20px;" name="add"></ion-icon>
+                      </ion-fab-button>
+                    </ion-row>
+                  </div>
+                </ion-col>
+
+
+
+                
+            </ion-row>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>
+</div>
+
+
+

@@ -1,0 +1,32 @@
+<ion-grid class="principal">
+  <ion-row>
+    <ion-label class="title">Modo Campaña</ion-label>
+  </ion-row>
+  <ion-row>
+    <ion-text class="text">{{text}}</ion-text>
+  </ion-row>
+  <ion-row>
+    <ion-label class="subject">Asignaturas</ion-label>
+  </ion-row>
+  <ion-row>
+    <ion-toolbar mode="md" class="toolbar">
+      <ion-segment  #segments  mode="md">
+          <ion-segment-button *ngFor="let subject of subjects ; let i = index" value="{{subject.courseId}}" class="ion-segment-button" (click)="getChapters(subject.courseId)">
+              <ion-label class="subjectName" style="text-transform: none;">{{subject?.subject}}</ion-label>
+            </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6" *ngFor="let practice of courseInformation.chapters ; let i = index">
+      <ion-item class="item" lines="none">
+        <ion-row>
+          <svg height="70" width="70" (click)="goToSubthemes(practice.chapterId)">
+              <circle cx="35" cy="35" r="35" stroke-width="0" [ngClass]="{'first-circle':i%4==0, 'second-circle':i%4==1, 'third-circle':i%4==2, 'fourth-circle':i%4==3}"/>
+            </svg>
+          <ion-label class="practice-title">{{practice.title}}</ion-label>
+        </ion-row>
+      </ion-item>
+  </ion-col>
+  </ion-row>
+</ion-grid>

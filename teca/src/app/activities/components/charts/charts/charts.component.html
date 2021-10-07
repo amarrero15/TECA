@@ -1,0 +1,22 @@
+<ion-grid class="principal">
+  <ion-row class="component">
+    <ion-col size="auto">
+      <app-student-side-bar></app-student-side-bar>
+    </ion-col>
+    <ion-col>
+      <app-activity-header [activityIndications]="activity.indications"></app-activity-header>
+      <app-analogies *ngIf="visibleAnalogies" (analogyEvent)="saveResponse($event)"></app-analogies>
+      <app-comparative *ngIf="visibleComparative" (comparativeEvent)="saveResponse($event)"></app-comparative>
+      <app-synonyms *ngIf="visibleSynonyms"></app-synonyms>
+      <app-mnemonics *ngIf="visibleMnemonics"></app-mnemonics>
+    </ion-col>
+  </ion-row>
+  <ion-row class="finalRow">
+    <ion-col>
+      <app-keywords [Keywords]="keywords"></app-keywords>
+    </ion-col>
+    <ion-col class="saveButton">
+      <ion-button shape="round" color="atomik" (click)="saveActivity()">Enviar a revisión</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
