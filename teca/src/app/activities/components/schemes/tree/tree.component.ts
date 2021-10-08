@@ -7,6 +7,7 @@ import { TreeResponse } from 'src/app/activities/interfaces/tree-response';
 })
 export class TreeComponent implements OnInit {
   mainIdeas=[];
+  size=30;
   constructor() { }
 
   ngOnInit() {}
@@ -17,6 +18,7 @@ export class TreeComponent implements OnInit {
       principalIdea: 'ideaPrincipal',
       leafs: [],
     }
+    this.size = this.mainIdeas.length >= 5 ? this.size + 7 : this.size;
     this.mainIdeas.push(newIdea);
   };
 
