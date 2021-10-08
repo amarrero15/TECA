@@ -8,6 +8,7 @@ import { KeyResponse } from '../../../interfaces/key-response';
 })
 export class KeyComponent implements OnInit {
   mainIdeas=[];
+  size=30;
   constructor() { }
 
   ngOnInit() {}
@@ -18,6 +19,7 @@ export class KeyComponent implements OnInit {
       principalIdea: 'ideaPrincipal',
       secondaryIdeas: [],
     }
+    this.size = this.mainIdeas.length >= 5 ? this.size + 7 : this.size;
     this.mainIdeas.push(newIdea);
   };
 
