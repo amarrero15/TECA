@@ -1,14 +1,13 @@
 .principal {
     width: 749px;
     height: 334px;
+    left: 378px;
+    top: 598px;
     background: #FFFFFF;
     border: 1px solid rgba(67, 87, 191, 0.5);
     box-sizing: border-box;
     box-shadow: 0px 6px 8px rgba(111, 156, 214, 0.45);
     border-radius: 10px;
-    margin-top: 10px;
-    margin-left: 11.00546875vw;
-    margin-bottom: 20px;
 }
 .schemeArea{
     width: 100%;
@@ -35,20 +34,6 @@
 .secundarykey {
 
 
-font-family: Mulish;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 15px;
-
-color: #334D6E;
-    
-    
-    
-}
-.primarykey {
-
-
     font-family: Mulish;
     font-style: normal;
     font-weight: normal;
@@ -56,6 +41,19 @@ color: #334D6E;
     line-height: 15px;
     
     color: #334D6E;
+    
+}
+.primarykey {
+
+
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    
+    color: #5570FF;
         
         
         
