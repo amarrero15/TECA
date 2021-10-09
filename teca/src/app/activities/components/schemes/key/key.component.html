@@ -31,7 +31,7 @@
           </ion-col>
           <!--ZONA IDEAS PRINCIPALES-->
           <ion-col size="auto">
-            <ion-row *ngFor="let mainIdea of mainIdeas; let i = index" >
+            <ion-row class="primarykey " *ngFor="let mainIdea of mainIdeas; let i = index" >
               <ion-col size="auto">
                 <ion-input class="main-idea-input" [(ngModel)]=mainIdea.principalIdea></ion-input>
                 <ion-fab-button style="margin-left: 125px;" class="buttons" (click)="addSecondaryIdea(i)">
@@ -39,7 +39,7 @@
                 </ion-fab-button>
               </ion-col>
               <ion-col>
-                <ion-row *ngFor="let secondaryIdea of mainIdea.secondaryIdeas">
+                <ion-row class="secundarykey " *ngFor="let secondaryIdea of mainIdea.secondaryIdeas">
                   <ion-input class="main-idea-input" ></ion-input>
                 </ion-row>
               </ion-col>
