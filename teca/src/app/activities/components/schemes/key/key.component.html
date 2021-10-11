@@ -8,9 +8,9 @@
           <ion-col size="auto"></ion-col>
           <div style="margin: auto;">
             <ion-label class="title">Titulo del Esquema</ion-label>
-            <div > 
-              <ion-fab-button  style="margin-left: 125px;" class="buttons" (click)="addPrincipalIdea()">
-                <ion-icon  name="add"></ion-icon>
+            <div> 
+              <ion-fab-button style="margin-left: 125px;" class="buttons" (click)="addPrincipalIdea()">
+                <ion-icon name="add"></ion-icon>
               </ion-fab-button>
             </div>
           </div>
@@ -29,11 +29,11 @@
             <ion-row class="primarykey " *ngFor="let mainIdea of mainIdeas; let i = index" >
               <ion-col  size="auto" >
                 <ion-input class="main-idea-input" [(ngModel)]=mainIdea.principalIdea></ion-input>
-                <ion-fab-button  style="margin-left: 125px;" class="buttons" (click)="addSecondaryIdea(i)">
+                <ion-fab-button style="margin-left: 125px;" class="buttons" (click)="addSecondaryIdea(i)">
                   <ion-icon name="add"></ion-icon>
                 </ion-fab-button>
               </ion-col>
-              <ion-col  class="idea-input" size="auto" > 
+              <ion-col > 
                 <ion-row class="secundarykey " *ngFor="let secondaryIdea of mainIdea.secondaryIdeas">
                   <ion-input class="main-idea-input" ></ion-input>
                 </ion-row>

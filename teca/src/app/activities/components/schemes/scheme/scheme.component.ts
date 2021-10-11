@@ -74,11 +74,10 @@ export class SchemeComponent implements OnInit {
 
   async presentAlert() {
     const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      header: 'Actividad enviada',
-      subHeader: 'Envío exitoso',
-      message: 'Actividad enviada a revisión',
-      buttons: ['Aceptar']
+      header: 'Enviado a revisión',
+      cssClass:'my-custom-class',
+      message: 'Espera mientras es revisado',
+      buttons: ['OK']
     });
 
     await alert.present();
