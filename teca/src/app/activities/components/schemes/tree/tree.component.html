@@ -26,21 +26,44 @@
             </svg>            
           </ion-col>
           <!--ZONA IDEAS PRINCIPALES-->
-          <ion-col size="auto">
-            <ion-row class="tree-node-font" *ngFor="let mainIdea of mainIdeas; let i = index" >
+          <ion-col>
+              <ion-row>
+                <ion-col size="auto" class="ideas-shape">
+                  <ion-row *ngFor="let mainIdea of mainIdeas; let i = index" >
+                    <ion-col >
+                      <ion-input class="main-idea-input" [(ngModel)]=mainIdea.principalIdea></ion-input>
+                      <ion-fab-button style="margin-left: 14vw;" class="buttons" (click)="addSecondaryIdea(i)">
+                        <ion-icon name="add"></ion-icon>
+                      </ion-fab-button>
+                    </ion-col>
+                  </ion-row>
+                </ion-col>
+                <ion-col size="auto" class="ideas-shape">
+                  <ion-row *ngFor="let mainIdea of mainIdeas; let i = index" >
+                    <ion-col>
+                      <ion-row *ngFor="let secondaryIdea of mainIdea.leafs">
+                        <ion-input class="main-idea-input" ></ion-input>
+                      </ion-row>
+                    </ion-col>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+          </ion-col>
+         <!--<ion-col size="auto" >
+            <ion-row  *ngFor="let mainIdea of mainIdeas; let i = index" >
               <ion-col size="auto">
                 <ion-input class="main-idea-input" [(ngModel)]=mainIdea.principalIdea></ion-input>
-                <ion-fab-button style="margin-left: 125px;" class="buttons" (click)="addSecondaryIdea(i)">
+                <ion-fab-button style="margin-left: 14vw;" class="buttons" (click)="addSecondaryIdea(i)">
                   <ion-icon name="add"></ion-icon>
                 </ion-fab-button>
               </ion-col>
               <ion-col>
-                <ion-row class="tree-node-font" *ngFor="let secondaryIdea of mainIdea.leafs">
+                <ion-row *ngFor="let secondaryIdea of mainIdea.leafs">
                   <ion-input class="main-idea-input" ></ion-input>
                 </ion-row>
               </ion-col>
             </ion-row>
-          </ion-col>
+          </ion-col> --> 
         </ion-row>
       </ion-col>
 
