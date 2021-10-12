@@ -8,14 +8,12 @@ import { TreeResponse } from 'src/app/activities/interfaces/tree-response';
 export class TreeComponent implements OnInit {
   mainIdeas=[];
   keySize = "";
-  principalContainer = true;
   secondaryContainer = true;
   constructor() { }
 
   ngOnInit() {}
 
   addPrincipalIdea(){ 
-    this.principalContainer =  false;
     const newIdea: TreeResponse={
       id: this.mainIdeas.length+1,
       principalIdea: 'Idea principal',
