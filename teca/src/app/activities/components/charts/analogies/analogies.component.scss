@@ -1,5 +1,5 @@
 .principal {
-    height: 350px;
+    height: 40vh;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -13,38 +13,38 @@
     width: 100%;
 }
 .content {
-    height: 414px;
+    height: 30vh;
     width: 100%;
     //display: flex;
     align-items: center;
     justify-content: center;
 }
 .box {
-    width: 721px;
-    height: 131px;
+    width: 60vw;
+    height: 20vh;
     margin-bottom: 10px;
     border: 2px solid #B2BFFF;
     box-sizing: border-box;
     border-radius: 15px;
 }
 .analogie-input {
-    width: 294.75px;
-    height: 78.54px;
+    width: 20vw;
+    height: 14vh;
     background: #FFFFFF;
     border: 1px solid #5570FF;
     box-sizing: border-box;
     border-radius: 3px;
 }
 .equal {
-    width: 26.47px;
-    height: 26.47px;   
+    width: 2vh;
+    height: 2vh;   
     --background: #5570FF;
     pointer-events: none;
 }
 
 .add-button {
-    width: 25px;
-    height: 25px;
+    width: 4vh;
+    height: 4vh;
     --background: #FF9F00;
     border-radius: 100%;
     --box-shadow: 0px;
