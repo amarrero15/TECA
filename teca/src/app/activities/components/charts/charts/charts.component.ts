@@ -64,7 +64,8 @@ export class ChartsComponent implements OnInit {
   }
 
   saveActivity(){
-    //console.log('Prueba');
+    console.log(this.response );
+    this.presentAlert();
     switch(this.activitySelected){
       case 'analogía':{
         this.activityService.createAnalogy(this.response);
