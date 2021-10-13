@@ -9,6 +9,7 @@ import { KeyResponse } from '../../../interfaces/key-response';
 export class KeyComponent implements OnInit {
   mainIdeas=[];
   size=30;
+  secondaryContainer = true;
   constructor() { }
 
   ngOnInit() {}
@@ -24,8 +25,11 @@ export class KeyComponent implements OnInit {
   };
 
   addSecondaryIdea(i: number){
+
     console.log(i)
     this.mainIdeas[i].secondaryIdeas.push('idea secundaria');
-  }
+    this.secondaryContainer = false;
+
+}
 
 }
