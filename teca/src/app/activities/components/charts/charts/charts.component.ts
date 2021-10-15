@@ -118,10 +118,9 @@ export class ChartsComponent implements OnInit {
 
   async presentAlert() {
     const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-
-      message: 'Actividad enviada a revisión',
-      buttons: ['Aceptar']
+      cssClass: 'custom-alertDanger',
+      message: 'Espera mientras es revisado',
+      buttons: ['OK']
     });
 
     await alert.present();

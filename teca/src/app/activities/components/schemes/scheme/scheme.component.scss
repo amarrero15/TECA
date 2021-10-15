@@ -12,3 +12,10 @@
 .component{
     height: 449px;
 }
+.customLoader {
+    .loading-wrapper {
+      border-radius: 20px;
+      background-color: darkblue;
+      color: orange;
+    }
+  }
