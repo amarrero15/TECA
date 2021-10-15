@@ -1,0 +1,31 @@
+.principal{
+    padding: 0%;
+}
+.finalRow{
+    height: 183px;
+    margin-top: 88px;
+    margin-left: 377.13px;
+}
+.saveButton{
+    margin-left: 103px;
+}
+
+.conten-center{
+ margin-left:10%;
+ width: 100%;
+}
+
+@media only screen and (max-width: 1405px) {
+    .conten-center{
+        margin-left:1%;
+        flex: none;
+        width:max-content;
+       }
+}
+@media only screen and (max-width: 970px) {
+    .conten-center{
+        margin-left:0%;
+        flex: none;
+        width: 50%;
+    }
+}

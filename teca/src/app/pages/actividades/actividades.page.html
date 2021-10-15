@@ -2,8 +2,6 @@
   <ion-grid class="principal">
     <app-charts [keywords]="activitykeywords" [activity]="myActivity" [activitySelected]="data" *ngIf="visibleCharts"></app-charts>
     <app-scheme [keywords]="activitykeywords" [activity]="myActivity" [activitySelected]="data" *ngIf="visibleSchemes"></app-scheme>
-    <!--
-    <app-maps></app-maps>
-    -->
+    <app-maps [keywords]="activitykeywords" [activity]="myActivity" [activitySelected]="data" *ngIf="visibleMaps"></app-maps>
   </ion-grid>
 </ion-content>
