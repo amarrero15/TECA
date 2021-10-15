@@ -1,6 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { ConsoleReporter } from 'jasmine';
-import { type } from 'os';
 import { ComparativeChart } from '../../../models/comparative-chart';
 
 @Component({
