@@ -4,7 +4,8 @@
     padding-top: 0px;
 }
 .selectionLabel{
-    width: 270px;
+    width: 20vw;
+    margin-bottom: 2vh;
 }
 
 .titles {
@@ -16,30 +17,30 @@
     color: #000000;
 }
 .input {
-    width: 288px;
-    height: 35px;
+    width: 20vw;
+    height: 14vh;
     background: #FFFFFF;
-    border: 1px solid #B2BFFF;
+    border: 1px solid #5570FF;
     box-sizing: border-box;
     border-radius: 3px;
 }
 .icon {
-    width: 25px;
-    height: 25px;
+    width: 2vh;
+    height: 2vh;   
     --background: #5570FF;
-    border-radius: 100%;
+    pointer-events: none;
 }
 .box {
+    width: 60vw;
+    height: 20vh;
     margin-bottom: 10px;
-    width: 706px;
-    height: 78px;
-    border: 1px solid #5570FF;
+    border: 2px solid #B2BFFF;
     box-sizing: border-box;
     border-radius: 15px;
 }
 .add-button {
-    width: 25px;
-    height: 25px;
+    width: 4vh;
+    height: 4vh;
     --background: #FF9F00;
     border-radius: 100%;
     --box-shadow: 0px;

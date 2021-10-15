@@ -7,19 +7,21 @@ import { TreeResponse } from 'src/app/activities/interfaces/tree-response';
 })
 export class TreeComponent implements OnInit {
   mainIdeas=[];
-  keySize = "";
+  keySize = "6vh";
   secondaryContainer = true;
+  primaryKey = true;
   constructor() { }
 
   ngOnInit() {}
 
   addPrincipalIdea(){ 
+    this.primaryKey = false;
     const newIdea: TreeResponse={
       id: this.mainIdeas.length+1,
       principalIdea: 'Idea principal',
       leafs: [],
     }
-    this.keySize = this.mainIdeas.length >= 2 ? "100%" : 6.5 + 2 * 4.7 * this.mainIdeas.length + "vh";
+    this.keySize = this.mainIdeas.length >= 2 ? "100%" : 6 + 2 * 4.7 * this.mainIdeas.length + "vh";
     this.mainIdeas.push(newIdea);
   };
 

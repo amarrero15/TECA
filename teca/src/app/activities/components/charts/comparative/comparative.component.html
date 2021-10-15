@@ -4,7 +4,7 @@
   </ion-row>
   <ion-row style="padding: 0px; margin-left: 10px;">
       <ion-col size="fixed" style="padding: 0px; margin-right: 4px">
-        <ion-checkbox [(ngModel)]="this.comparativeResponse.type" class="checkbox" (click)="this.onChange1()"></ion-checkbox>
+        <ion-checkbox [checked]="this.TypeSimilar" [(ngModel)]="this.comparativeResponse.type" class="checkbox" (click)="this.onChange1()"></ion-checkbox>
       </ion-col>
       <ion-col size="fixed" style="padding: 0px;margin-right: 85px; align-self: center">
         <ion-label class="type-label">Similitud</ion-label>

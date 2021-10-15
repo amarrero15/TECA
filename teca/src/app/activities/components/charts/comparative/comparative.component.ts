@@ -1,4 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { ConsoleReporter } from 'jasmine';
+import { type } from 'os';
 import { ComparativeChart } from '../../../models/comparative-chart';
 
 @Component({
@@ -26,13 +28,11 @@ export class ComparativeComponent implements OnInit {
   ngOnInit() {}
 
   onChange1(){
-    this.TypeSimilar=true;
-    this.TypeDiferences=false;
+    this.TypeSimilar ? this.TypeDiferences = false : this.TypeSimilar = true;
   }
 
   onChange2(){
-    this.TypeSimilar=false;
-    this.TypeDiferences=true;
+    this.TypeDiferences ? this.TypeSimilar = false : this.TypeDiferences = true;
   }
 
   changeType2Similar() {
