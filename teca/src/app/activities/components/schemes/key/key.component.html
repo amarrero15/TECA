@@ -1,6 +1,6 @@
-<ion-grid class="principal">
+<ion-grid size="auto" class="principal">
   <ion-content>
-    <ion-row class="schemeArea">
+    <ion-row size="auto"class="schemeArea">
 
       <ion-col size="auto">
         <ion-row style="height: 100%; width:100%; justify-content: center">
@@ -32,9 +32,12 @@
                   <ion-icon name="add"></ion-icon>
                 </ion-fab-button>
               </ion-col>
-              <ion-col class="ideas-shape" [hidden]="secondaryContainer">
-                <ion-row class="secundarykey " *ngFor="let secondaryIdea of mainIdea.secondaryIdeas">
-                  <ion-input class="main-idea-input"></ion-input>
+              <ion-col>
+                <ion-row *ngFor="let secondaryIdea of mainIdea.secondaryIdeas">
+                  <ion-col class="secondideas-shape" [hidden]="secondaryContainer">
+                    <ion-input class="main-idea-input"></ion-input>
+
+                  </ion-col>
                 </ion-row>
               </ion-col>
             </ion-row>

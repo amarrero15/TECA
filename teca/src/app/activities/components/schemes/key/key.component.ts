@@ -8,7 +8,7 @@ import { KeyResponse } from '../../../interfaces/key-response';
 })
 export class KeyComponent implements OnInit {
   mainIdeas=[];
-  size=30;
+  size=28;
   secondaryContainer = true;
   constructor() { }
 
@@ -22,12 +22,14 @@ export class KeyComponent implements OnInit {
     }
     this.size = this.mainIdeas.length >= 5 ? this.size + 7 : this.size;
     this.mainIdeas.push(newIdea);
+
   };
 
   addSecondaryIdea(i: number){
 
     console.log(i)
     this.mainIdeas[i].secondaryIdeas.push('idea secundaria');
+    this.size = this.mainIdeas.length >= 5 ? this.size + 3 : this.size;
     this.secondaryContainer = false;
 
 }
