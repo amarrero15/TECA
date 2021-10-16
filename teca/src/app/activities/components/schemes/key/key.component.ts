@@ -20,7 +20,7 @@ export class KeyComponent implements OnInit {
       principalIdea: 'ideaPrincipal',
       secondaryIdeas: [],
     }
-    this.size = this.mainIdeas.length >= 5 ? this.size + 7 : this.size;
+    this.size = this.mainIdeas.length >= 5 ? this.size + 5 : this.size;
     this.mainIdeas.push(newIdea);
 
   };
@@ -29,7 +29,7 @@ export class KeyComponent implements OnInit {
 
     console.log(i)
     this.mainIdeas[i].secondaryIdeas.push('idea secundaria');
-    this.size = this.mainIdeas.length >= 5 ? this.size + 3 : this.size;
+    this.size = this.mainIdeas.length >= 3 ? this.size + 3 : this.size;
     this.secondaryContainer = false;
 
 }
