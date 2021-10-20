@@ -5,43 +5,16 @@
         <ion-label >{{value1}}</ion-label>
         <ion-toggle color="atomik" value={{type}} (ionChange)="selectType($event)"></ion-toggle>
         <ion-label>{{value2}}</ion-label>
-      </ion-item>
-      <!--
-      <ion-row>
-        <ion-col size="fixed">
-          <ion-fab-button class="icon" >
-            <ion-icon style="color:white; padding: 0px;font-size: 15px;" src="assets/icon/activities/equal.svg"></ion-icon>
-          </ion-fab-button>
-        </ion-col>
-        <ion-col>
-          <ion-label class="titles">Sinónimos</ion-label>
-        </ion-col>
-      </ion-row>
-      -->
+      </ion-item> 
     </ion-col>
-    <!--
-    <ion-col>
-      <ion-row>
-        <ion-col size="fixed">
-          <ion-fab-button class="icon">
-            <ion-icon style="color:white; padding: 0px;font-size: 15px;" src="assets/icon/activities/not-equal.svg"></ion-icon>
-          </ion-fab-button>
-        </ion-col>
-        <ion-col>
-          <ion-label class="titles">Antónimos</ion-label>
-        </ion-col>
-      </ion-row>
-    </ion-col>
-    -->
-
   </ion-row>
 
-  <ion-row style="height: 40vh; justify-content: center" >
+  <ion-row style="height: 45vh; justify-content: center" >
     <ion-content class="content">
         <ion-row style="height: 100%; justify-content: center">
           <div style="align-self: center">
 
-            <ion-row *ngFor="let synonym of Synonyms ; let i = index" style="margin-bottom: 15px" >
+            <ion-row *ngFor="let synonym of Synonyms ; let i = index">
               <div class="box" style="position: relative" *ngIf="!this.type">
                 <ion-fab vertical="bottom" horizontal="end" style="right: 10px; bottom: -10px">
                   <ion-fab-button class="add-button" (click)="addSynonym()">
@@ -76,7 +49,7 @@
 
             </ion-row>
 
-            <ion-row *ngFor="let antomym of Antonyms ; let i = index" style="margin-bottom: 15px" >
+            <ion-row *ngFor="let antomym of Antonyms ; let i = index" >
               <div class="box" style="position: relative" *ngIf="this.type">
                 <ion-fab vertical="bottom" horizontal="end" style="right: 10px; bottom: -10px">
                   <ion-fab-button class="add-button" (click)="addAntonym()">
