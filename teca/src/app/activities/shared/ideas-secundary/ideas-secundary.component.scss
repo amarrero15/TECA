@@ -1,0 +1,48 @@
+  .palette{
+    margin-right: 5px;
+   }
+   .rowIcons{
+       align-items: end;
+       justify-content: end;
+   }
+   
+   .rowIcons2{
+       align-items:initial;
+       justify-content: initial;
+   }
+   
+   .rowIdeas{
+       align-content: center;
+       justify-content: center;
+   }
+   .Fmm{
+    padding-left: 12px;
+    padding-right: 12px;
+    background: #5570FF;
+    border-radius: 15px;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 25px;
+    /* identical to box height */
+    
+    letter-spacing: 0.01em;
+    
+    color: #FFFFFF;
+    }
+
+    .buttons {
+        width: 20px;
+        height: 20px;
+        padding: 0px;  
+        --background: #FF9F00;
+        border-radius: 100%;
+        --box-shadow: 0px;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    ::ng-deep input-Secundary{
+        background-color: #FFFFFF;
+    }

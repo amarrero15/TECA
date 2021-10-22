@@ -1,0 +1,24 @@
+
+  <ion-row *ngFor="let Idea of Mostrar; index as i">
+    <ion-col>
+      <ion-input
+        class="Fmm"
+        *ngIf="!Idea.principalIdea; else noIdea"
+        [value]='Idea.id+"->"+Idea.idPadre'
+      ></ion-input>
+      <ion-badge #noIdea (click)="abrirModal(true)" class="Fmm">{{
+        Idea.principalIdea
+      }}</ion-badge>
+      <ion-row class="rowIcons">
+        <ion-fab-button class="buttons palette">
+          <ion-icon name="color-palette-outline"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button
+          class="buttons pluss"
+          (click)="addSecondaryIdea(Idea.id)"
+        >
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-row>
+    </ion-col>
+  </ion-row>
