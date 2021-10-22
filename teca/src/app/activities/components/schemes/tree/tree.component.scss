@@ -16,6 +16,8 @@
     width: 13vw;
     height: 7.5vh;
     margin-right: 1vw;
+    border-radius: 10px;
+    margin-bottom: 1vh;
 }
 
 .schemeArea{
@@ -23,14 +25,13 @@
     height: 100%;
 }
 
-.title {
-    font-family: Muli;
+.title {    
+    font-family: Mulish;
     font-style: normal;
     font-weight: bold;
-    font-size: 2vh;
+    font-size: 14px;
+    line-height: 18px;
     letter-spacing: 0.01em;
-    align-self: center; 
-    color: #334D6E;   
 }
 
 .main-idea-input {
@@ -41,11 +42,15 @@
     border: 1px solid #FF9F00;
     box-sizing: border-box;
     border-radius: 3px;
-    font-family: Muli;
+    font-family: Mulish;
     font-style: normal;
-    font-weight: normal;
-    font-size: 1.5vh;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+    letter-spacing: 0.01em;
     color: #334D6E;
+    margin-bottom: 0.2vh;
 }
 
 .buttons {

@@ -7,8 +7,7 @@ import { TreeResponse } from 'src/app/activities/interfaces/tree-response';
 })
 export class TreeComponent implements OnInit {
   mainIdeas=[];
-  keySize = "6vh";
-  secondaryContainer = true;
+  keySize = "7vh";
   primaryKey = true;
   constructor() { }
 
@@ -21,14 +20,13 @@ export class TreeComponent implements OnInit {
       principalIdea: 'Idea principal',
       leafs: [],
     }
-    this.keySize = this.mainIdeas.length >= 2 ? "100%" : 6 + 2 * 4.7 * this.mainIdeas.length + "vh";
+    this.keySize = this.mainIdeas.length >= 2 ? "100%" : 7 + 2 * 4.7 * this.mainIdeas.length + "vh";
     this.mainIdeas.push(newIdea);
   };
 
   addSecondaryIdea(i: number){
-    this.secondaryContainer = false;
     if (this.mainIdeas[i].leafs.length<2){
       this.mainIdeas[i].leafs.push('Idea secundaria');
-    } 
+    }
   }
 }

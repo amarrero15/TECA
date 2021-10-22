@@ -34,8 +34,8 @@
                   <ion-icon name="add"></ion-icon>
                 </ion-fab-button>
               </ion-col>
-              <ion-col class="ideas-shape" [hidden]="secondaryContainer">
-                <ion-row *ngFor="let secondaryIdea of mainIdea.leafs">
+              <ion-col class="ideas-shape" [hidden]="this.mainIdea.leafs == ''">
+                <ion-row *ngFor="let secondaryIdea of mainIdea.leafs" >
                   <ion-input class="main-idea-input" ></ion-input>
                 </ion-row>
               </ion-col>
