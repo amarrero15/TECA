@@ -1,18 +1,36 @@
-<ion-grid class="principal">
-  <ion-content [scrollX]="true" [forceOverscroll]="true" (click)="abrirModal()">
+<ion-grid  id="principal" class="principal" >
+  <ion-content
+    id="contentBody"
+    [scrollX]="true"
+    [forceOverscroll]="true"
+    (click)="abrirModal()"
+   
+  >
+    <app-ideas-secundary
+      id="n-{{ Idea.id }}"
+      class="Item"
+      [ngStyle]="{'transform': getPosition(Idea.px,Idea.py)}"
+      *ngFor="let Idea of Center"
+      (IdeasAll)="ActualizarIdeas($event)"
+      [mainIdeas]="mainIdeas"
+      [ideasXMostrar]="Idea"
+      [lado]="'C'"
+      (dblclick)="cambiarPosicion(Idea.id)"
+      (press)="cambiarPosicion(Idea.id)"
+      (click)="Colocar(Idea.id)"
+    ></app-ideas-secundary>
 
-        <ion-row style="height: 100%; width: max-content; justify-content: center">
-          <div style="margin: auto">
-            <ion-grid class="ion-margin">
-              <ion-row>
-                <ion-col *ngFor="let Idea of IdeasOrden; index as i">
-                  <app-ideas-secundary (IdeasAll)="ActualizarIdeas($event)" [mainIdeas]="mainIdeas" [ideasXMostrar]="Idea" [lado]="'C'">1</app-ideas-secundary>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </div>
-        </ion-row>
-
-    
+    <app-ideas-secundary
+      id="n-{{ Idea.id }}"
+      class="Item"
+      [ngStyle]="{'transform': getPosition(Idea.px,Idea.py)}"
+      *ngFor="let Idea of IdeasOrd"
+      (IdeasAll)="ActualizarIdeas($event)"
+      [mainIdeas]="mainIdeas"
+      [ideasXMostrar]="Idea"
+      [lado]="'R'"
+      (dblclick)="cambiarPosicion(Idea.id)"
+      (click)="Colocar(Idea.id)"
+    ></app-ideas-secundary>
   </ion-content>
 </ion-grid>

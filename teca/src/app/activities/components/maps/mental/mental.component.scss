@@ -136,3 +136,13 @@ color: #FFFFFF;
     align-content: center;
     justify-content: center;
 }
+
+
+.Item{
+    position: absolute;
+}
+
+.Item:hover{
+ background: rgba(5, 5, 7, 0.123);
+ border-radius: 15px;
+}

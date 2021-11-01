@@ -6,8 +6,10 @@ export interface MindResponse {
 
 export interface MindresponseL_R{
     id: number;
+    idPadre:number;
     principalIdea: string;
     sub: [];
     cant:number;
-    idPadre:number;
+    px:number;
+    py:number;
 }
