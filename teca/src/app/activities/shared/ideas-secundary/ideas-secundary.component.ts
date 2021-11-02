@@ -53,11 +53,11 @@ export class IdeasSecundaryComponent implements OnInit {
     switch (this.lado) {
       case "C":
         pxr = px + 165;
-        pyr = py +(hijos*100);
+        pyr = py +(hijos*40);
         break;
       case "R":
         pxr = px + 200;
-        pyr = py +(hijos*65);
+        pyr = py +(hijos*40);
         break;
     }
 
@@ -88,6 +88,27 @@ export class IdeasSecundaryComponent implements OnInit {
     } else {
       for (let i = 0; i < ideas.sub.length; i++) {
         this.Find(ideas.sub[i], id, newIdeaS);
+      }
+    }
+  }
+
+
+  ActualizarDato(valor:string,id:number){
+    this.Buscar_modificar_Valor(id,valor)
+    this.sentNewIdeas();
+  }
+
+  Buscar_modificar_Valor(id: number, valor: string) {
+    this.Find2(this.ideas[0], id, valor);
+  }
+
+  Find2(ideas: any, id: number, valor: string) {
+    
+    if (ideas.id === id) {
+      ideas.principalIdea = valor
+    } else {
+      for (let i = 0; i < ideas.sub.length; i++) {
+        this.Find2(ideas.sub[i], id, valor);
       }
     }
   }

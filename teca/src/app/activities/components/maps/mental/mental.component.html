@@ -1,10 +1,8 @@
-<ion-grid  id="principal" class="principal" >
+<ion-grid  id="principal" class="principal"  (click)="abrirModal()">
   <ion-content
     id="contentBody"
     [scrollX]="true"
     [forceOverscroll]="true"
-    (click)="abrirModal()"
-   
   >
     <app-ideas-secundary
       id="n-{{ Idea.id }}"
@@ -15,9 +13,7 @@
       [mainIdeas]="mainIdeas"
       [ideasXMostrar]="Idea"
       [lado]="'C'"
-      (dblclick)="cambiarPosicion(Idea.id)"
-      (press)="cambiarPosicion(Idea.id)"
-      (click)="Colocar(Idea.id)"
+      (mouseover)="cambiarPosicion(Idea.id)"
     ></app-ideas-secundary>
 
     <app-ideas-secundary
@@ -29,8 +25,9 @@
       [mainIdeas]="mainIdeas"
       [ideasXMostrar]="Idea"
       [lado]="'R'"
-      (dblclick)="cambiarPosicion(Idea.id)"
-      (click)="Colocar(Idea.id)"
+      (mouseover)="cambiarPosicion(Idea.id)"
     ></app-ideas-secundary>
+
+    <div [innerHtml]="getConectors()"></div>
   </ion-content>
 </ion-grid>
