@@ -12,12 +12,12 @@
   <ion-row style="height: 45vh; justify-content: center" >
     <ion-content class="content">
         <ion-row style="height: 100%; justify-content: center">
-          <div style="align-self: center">
+          <div style="align-self: center"  id="pngNode">
 
-            <ion-row *ngFor="let synonym of Synonyms ; let i = index">
-              <div class="box" style="position: relative" *ngIf="!this.type">
+            <ion-row *ngFor="let item of Items ; let i = index">
+              <div class="box">
                 <ion-fab vertical="bottom" horizontal="end" style="right: 10px; bottom: -10px">
-                  <ion-fab-button class="add-button" (click)="addSynonym()">
+                  <ion-fab-button class="add-button" (click)="addItem()">
                     <ion-icon style="color:white; padding: 0px;font-size: 20px;" name="add"></ion-icon>
                   </ion-fab-button>
                 </ion-fab>
@@ -41,41 +41,6 @@
                     <ion-row style="justify-content: center">
                       <div>
                         <ion-input [(ngModel)]="this.Synonyms[i].word2" class="input"></ion-input>
-                      </div>
-                    </ion-row>
-                  </ion-col>
-                </ion-row>
-              </div>
-
-            </ion-row>
-
-            <ion-row *ngFor="let antomym of Antonyms ; let i = index" >
-              <div class="box" style="position: relative" *ngIf="this.type">
-                <ion-fab vertical="bottom" horizontal="end" style="right: 10px; bottom: -10px">
-                  <ion-fab-button class="add-button" (click)="addAntonym()">
-                    <ion-icon style="color:white; padding: 0px;font-size: 20px;" name="add"></ion-icon>
-                  </ion-fab-button>
-                </ion-fab>
-                    
-                <ion-row style="justify-content: center; height: 100%; width: 100%;">
-                  <ion-col style="align-self: center">
-                    <ion-row style="justify-content: center">
-                      <div>
-                        <ion-input [(ngModel)]="this.Antonyms[i].word1" class="input"></ion-input>
-                      </div>
-                    </ion-row>
-                  </ion-col>
-                  <ion-col size="fixed" style="align-self: center;">
-                    <ion-row style="justify-content: center">
-                        <ion-fab-button class="icon" style="--background: #FF9F00;width: 26.47px;height: 26.47px; margin-left: 10px; margin-right: 10px;">
-                          <ion-icon src="assets/icon/activities/not-equal.svg" style="color:white;width: 20px;height: 15px;"></ion-icon>
-                        </ion-fab-button>
-                    </ion-row>
-                  </ion-col>  
-                  <ion-col style="align-self: center"> 
-                    <ion-row style="justify-content: center">
-                      <div>
-                        <ion-input [(ngModel)]="this.Antonyms[i].word2" class="input"></ion-input>
                       </div>
                     </ion-row>
                   </ion-col>

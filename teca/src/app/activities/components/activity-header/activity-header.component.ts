@@ -15,7 +15,7 @@ export class ActivityHeaderComponent implements OnInit {
 
   saveActivity() {
     console.log("click")
-    var node = document.getElementById("principal");
+    var node = document.getElementById("pngNode");
     htmlToImage.toPng(node)
     .then((dataUrl) => {
       download(dataUrl, 'guia.png');
