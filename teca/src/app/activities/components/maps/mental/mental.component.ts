@@ -97,7 +97,7 @@ export class MentalComponent implements OnInit {
     gesture.enable();
   }
   getPositionMouse(e) {
-    var elemento = document.getElementById("principal");
+    var elemento = document.getElementById("svgId");
     var posicion = elemento.getBoundingClientRect();
     var xPosition = e.currentX - (posicion.x + 30);
     var yPosition = e.currentY - (posicion.y + 30);
@@ -117,7 +117,7 @@ export class MentalComponent implements OnInit {
         conector.setAttribute("d", s);
       } catch (error) {}
 
-      // conectores de hijos
+      // conectores de hijos cola
       try{
       var hijos = this.FindHijosId(parseInt(IdIdea),this.mainIdeas[0])
       hijos.forEach((i)=>{
@@ -138,7 +138,7 @@ export class MentalComponent implements OnInit {
   Colocar(id: number) {
     var elemento = document.getElementById("n-" + id);
     var posicion = elemento.getBoundingClientRect();
-    var principal = document.getElementById("principal");
+    var principal = document.getElementById("svgId");
     var posicionP = principal.getBoundingClientRect();
     this.Buscar_modificar(
       id,
@@ -148,14 +148,18 @@ export class MentalComponent implements OnInit {
   }
 
 
-  FindHijosId(id: number,idea:any) {
+  FindHijosId(id: number,idea:any){
+    var sub
     if (idea.id === id) {
         return idea.sub
     } else {
+      
       for (let i = 0; i < idea.sub.length; i++) {
-       return this.FindHijosId(id,idea.sub[i]);
+        sub = this.FindHijosId(id,idea.sub[i]);
+        if(sub)return sub
       }
     }
+    
   }
 
 
@@ -185,30 +189,18 @@ export class MentalComponent implements OnInit {
   getConectors() {
     if (this.mainIdeas.length > 0 && this.mainIdeas[0].sub.length > 0) {
       return this.sanitizer.bypassSecurityTrustHtml(
-        this.getsvg() +
+        "<svg id='svgId' width='1440' height='796' xmlns='http://www.w3.org/2000/svg'>"+
           this.getPath(
             this.mainIdeas[0].id,
             this.mainIdeas[0].px,
             this.mainIdeas[0].py,
             this.mainIdeas[0]
-          ) +
+          )+ 
           "</svg>"
       );
     }
   }
 
-  getsvg() {
-    var elemento = document.getElementById("principal");
-    var posicion = elemento.getBoundingClientRect();
-    if (posicion.x > 0) {
-      return (
-        "<svg id='svgId'width='100%' height='" +
-        posicion.height +
-        " 'xmlns='http://www.w3.org/2000/svg'>"
-      );
-    }
-    return "<svg xmlns='http://www.w3.org/2000/svg'>";
-  }
 
   getPath(Pid: number, Ppx: number, Ppy: number, idea: any) {
     var str = "";
@@ -265,6 +257,7 @@ export class MentalComponent implements OnInit {
     }
 
     return (
+      "<svg id='svgId' width='1440' height='796' xmlns='http://www.w3.org/2000/svg'>"+
       "<path  id='pn-" +
       id +
       "' d='M " +

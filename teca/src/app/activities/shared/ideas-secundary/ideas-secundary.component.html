@@ -1,10 +1,11 @@
 <ion-row *ngFor="let Idea of Mostrar" style="width: max-content">
   <ion-col class="col-idea">
-    <ion-row class="Fmm">
+    <ion-row  *ngIf="!Idea.principalIdea" class="Fmm Fmm2">
       <ion-input  class="Fmm-text fmm-input"
       (change)="ActualizarDato($event.target.value,Idea.id)"
-        *ngIf="!Idea.principalIdea; else noIdea" 
       ></ion-input>
+    </ion-row>
+    <ion-row  *ngIf="Idea.principalIdea" class="Fmm">
       <ion-badge #noIdea (dblclick)="abrirModal(true)"  class="Fmm-text">{{
         Idea.principalIdea
       }}</ion-badge>

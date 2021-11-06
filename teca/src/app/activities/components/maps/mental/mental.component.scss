@@ -1,6 +1,8 @@
 .principal {
-    width: 749px;
-    height: 334px;
+    //width: 749px;
+    //height: 334px;
+    height: 100%;
+    width: 100%;
     background: #FFFFFF;
     border: 1px solid rgba(67, 87, 191, 0.5);
     box-sizing: border-box;
@@ -8,11 +10,11 @@
     border-radius: 10px;
 }
 
-@media only screen and (max-width: 970px) {
+/*@media only screen and (max-width: 970px) {
     .principal {
         width: 500px;
     }
-}
+}*/
 .title {
     font-family: Muli;
     font-style: normal;

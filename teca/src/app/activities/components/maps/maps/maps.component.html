@@ -11,9 +11,9 @@
         ></app-activity-header>
       </ion-row>
 
-      <ion-row  size="auto" >
-        <app-mental *ngIf="visibleMental"></app-mental>
-        <app-conceptual *ngIf="visibleConseptual"></app-conceptual>
+      <ion-row  size="auto" class="row-maps">
+        <app-mental class="areaCuadro" *ngIf="visibleMental"></app-mental>
+        <app-conceptual class="areaCuadro" *ngIf="visibleConseptual"></app-conceptual>
       </ion-row>
       <ion-row>
         <ion-col>
