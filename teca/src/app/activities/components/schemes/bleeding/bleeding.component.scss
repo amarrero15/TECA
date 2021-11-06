@@ -1,0 +1,101 @@
+.principal {
+    padding-top: 30px;
+    padding-left: 30px;
+    width: 749px;
+    height: 334px;
+    margin-left: 11.00546875vw;
+    background: #FFFFFF;
+    border: 1px solid rgba(67, 87, 191, 0.5);
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 0px 6px 8px rgba(111, 156, 214, 0.45);
+}
+.central-theme-label {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 23px;
+    color: #FFFFFF;
+}
+.central-theme-div {
+    background: #5570FF;
+    border-radius: 5px;
+    padding: 15px;
+}
+.text-label {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;  
+    margin: 0%;  
+}
+.text-div {
+    width: 542px;
+    height: 82px;
+    background: #B2C0FC;
+    border-radius: 5px;
+    padding: 15px;
+}
+.font-options-div {
+    background: #FF9F00;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+.font-buttons {
+    background: transparent;
+    outline:none;
+}
+.button-bold {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+.button-italic {
+    font-family: Muli;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+.button-underline {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: #FFFFFF;
+    text-decoration: underline;
+
+}
+.bold {
+    font-weight: bold  !important; 
+}
+.italic {
+    font-style: italic !important;
+}
+.underline {
+    text-decoration: underline;
+}
+.input {
+    width: 542px;
+    height: 82px;
+    background: #FFFFFF;
+    border: 1px solid #FF9F00;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0%; 
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgb(126, 126, 126);  
+    margin: 0%;  
+}

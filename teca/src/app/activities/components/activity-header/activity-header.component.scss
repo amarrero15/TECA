@@ -1,0 +1,72 @@
+.title{
+    width: 26.484375vw;
+    height: 5,375vh;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: 0.01em;
+
+    color: #5570FF;
+}
+
+.indicationsTitle{
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+
+    color: #334D6E;
+}
+
+.indications{
+    font-family: Mulish;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.01em;
+
+    color: rgba(51, 77, 110, 0.83);
+}
+.item #downloadIcon {
+    width: 25px;
+    height: 27px;
+    margin-left: auto;
+    margin-right: auto;
+    content: url('../../../../assets/icon/activities/activity-header/download.svg');
+}
+.item #saveIcon {
+    margin-left: auto;
+    margin-right: auto;
+    content: url('../../../../assets/icon/activities/activity-header/save.svg');
+}
+.options{
+    margin-left: 748.87px;
+}
+.textOptions{
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+
+    color: #334D6E;
+}
+
+@media only screen and (max-width: 1230px) {
+    .options{
+        margin-left: 275%;
+        width: max-content;
+    }
+}
+@media only screen and (max-width: 970px) {
+    .options{
+        margin-left: 138%;
+        width: max-content;
+    }
+}

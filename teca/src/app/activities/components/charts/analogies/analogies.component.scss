@@ -1,0 +1,51 @@
+.principal {
+    height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.analogyView{
+    margin-top: 50px;
+}
+.principal-div {
+    height: 100%;
+    width: 100%;
+}
+.content {
+    height: 414px;
+    width: 100%;
+    //display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.box {
+    width: 721px;
+    height: 131px;
+    margin-bottom: 10px;
+    border: 2px solid #B2BFFF;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.analogie-input {
+    width: 294.75px;
+    height: 78.54px;
+    background: #FFFFFF;
+    border: 1px solid #5570FF;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.equal {
+    width: 26.47px;
+    height: 26.47px;   
+    --background: #5570FF;
+    pointer-events: none;
+}
+
+.add-button {
+    width: 25px;
+    height: 25px;
+    --background: #FF9F00;
+    border-radius: 100%;
+    --box-shadow: 0px;
+}

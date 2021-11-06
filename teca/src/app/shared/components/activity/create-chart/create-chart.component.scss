@@ -1,0 +1,52 @@
+.title {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 19px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #5570FF;
+    margin-bottom: 10px;
+}
+.indications-label {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    color: #787575;
+    margin-bottom: 32px;
+}
+.chart-options-content {
+    width: 837px;
+    height: 238px;
+    background: #DDE2FF;
+    border: 1px solid #6F9CD6;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+.chart-option-label {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.01em;
+    color: #334D6E;
+}
+.chart-option-img-container {
+    width: 247px;
+    height: 143px;
+    background: #FFFFFF;
+    border: 1px solid rgba(85, 112, 255, 0.87);
+    box-sizing: border-box;
+    box-shadow: 0px 5px 5px rgba(85, 112, 255, 0.56);
+    border-radius: 5px;
+    align-items: center;
+}
+.chart-option-img {
+    margin: auto;
+    width: 200px;
+}

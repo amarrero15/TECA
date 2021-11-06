@@ -1,5 +1,7 @@
 {
   "name": "teca",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

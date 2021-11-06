@@ -1,0 +1,32 @@
+<ion-grid>
+  <ion-row >
+    <ion-col class="titulo">
+        <ion-label color="atomik">{{titulo}}</ion-label>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+        <!--En esta seccion va el segment para seleccionar el tipo de avatar-->
+        <ion-item>
+          <ion-segment value="{{this.userType}}">
+            <ion-segment-button value="Estudiante" checked="this.visibleStudent">
+            <ion-label>{{tipo1}}</ion-label>
+          </ion-segment-button >
+          <ion-segment-button value="Docente" checked="!this.visibleStudent">
+            <ion-label>{{tipo2}}</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+        </ion-item>       
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <!--En esta seccion va los subcomponentes para seleccionar el avatar por tipo y sexo-->
+      <app-professor-avatar tipo1="Femenino" tipo2="Masculino" mensaje="Escoge un avatar para tu cuenta" comando="Comencemos" *ngIf="visibleProfessor" (newProfessorEvent)="setAvatarUser($event)" [professorInfo]="this.registerData"></app-professor-avatar>
+      <app-student-avatar tipo1="Femenino" tipo2="Masculino" mensaje="Escoge un avatar para tu cuenta" comando="Comencemos" *ngIf="visibleStudent" (newStudentEvent)="setAvatarUser($event)" [studentInfo]="this.registerData"></app-student-avatar>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+

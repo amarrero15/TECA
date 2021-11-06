@@ -24,3 +24,29 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+.highlightText {
+  text-decoration: underline;
+}
+.edit-popover-class {
+    --width:674px
+}
+.addStudent-popover-class {
+    --width:674px;
+    --height:502px;
+}
+.materials-popover-class {
+  --width:258px;
+  --height:178px;
+}
+.chapter-popover-class {
+  --width:674px;
+  --height:273px;
+}
+.theme-popover-class {
+  --width:674px;
+  --height:309px;
+}
+.activity-popover-class {
+  --width:674px;
+  --height:502px;
+}

@@ -1,0 +1,19 @@
+<ion-grid class="principal">
+  <ion-row>
+    <ion-label class="title">Palabras clave</ion-label>
+  </ion-row>
+  <ion-row>
+    <div class="words-content">
+      <ion-row>
+        <ion-col *ngFor="let keyword of Keywords">
+          <div class="word-content">
+            <div class="word-label-content">
+              <ion-label center class="word-label">{{keyword}}</ion-label>
+            </div>
+            <ion-badge class="word-badge">X</ion-badge>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  </ion-row>
+</ion-grid>

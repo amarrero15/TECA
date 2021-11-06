@@ -1,0 +1,44 @@
+.title{
+    //position: absolute;
+    width: 230px;
+    height: 40px;
+    margin-top: 40px;
+    left: 344px;
+    top: 133px;
+
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 35px;
+    letter-spacing: 0.01em;
+
+    color: #5570FF;
+}
+.title-input{
+    width: 623px;
+    height: 56.55px;
+    margin-left: 192.37px;
+    border: 1px solid #6F9CD6;
+    box-sizing: border-box;
+    border-top-left-radius: 5px 5px;
+    border-top-right-radius: 5px 5px;
+    //border-bottom-left-radius: 5px 5px;
+}
+.content-text-area{
+    margin-top: 0px;
+    width: 623px;
+    margin-left: 192.37px;
+    height: 343.45px;
+    border: 1px solid #6F9CD6;
+    box-sizing: border-box;
+    //border-top-left-radius: 5px 5px;
+    //border-top-right-radius: 5px 5px;
+    border-bottom-left-radius: 5px 5px;
+    border-bottom-right-radius: 5px 5px;
+}
+.saveButton{
+    width: 162px;
+    height:53px;
+    margin-top: 460px;
+}

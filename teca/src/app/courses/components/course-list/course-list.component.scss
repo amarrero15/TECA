@@ -1,0 +1,72 @@
+.principal{
+
+    height: 100%;
+    padding: 0px;
+    background: #E5E5E5;
+    margin-left: 0vw;
+    margin-right: 0vw;
+}
+.title{
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2.1875vw;  
+    color: #5570FF;
+    margin-left: 7.95859375vw;
+}
+.question{
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.09375vw;  
+    color: #334D6E;
+    
+    margin-left: 7.64609375vw;
+}
+.activateCourse{
+    width: 12.734375vw;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.09375vw;
+    text-transform: none;
+    margin-left: 63.5054688vw;
+    margin-right: 5.234375vw;
+}
+.courses{
+    width: 712px;
+    margin-left: 101.87px;
+    margin-right: 5.234375vw;
+}
+
+.item #addIcon {
+    content: url('../../../../assets/icon/general/add.svg');
+}
+.card{
+    width: 214px;
+    height: 255px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+  
+    
+  }
+  
+.card-icon {
+    position: relative;
+    width: 80px;
+    height: 98px;
+    left: 50px;
+  }
+  
+  .card-title {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  
+    color: #FFFFFF;
+  }
+

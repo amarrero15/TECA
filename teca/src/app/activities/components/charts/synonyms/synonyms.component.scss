@@ -1,0 +1,62 @@
+.principal {
+    height: 100%;
+    width: 100%;
+    padding-top: 0px;
+}
+.selectionLabel{
+    width:max-content;
+}
+
+.selectionLabel ion-label{
+    width: max-content;
+    height: 15px;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.titles {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+}
+.input {
+    width: 288px;
+    height: 35px;
+    background: #FFFFFF;
+    border: 1px solid #B2BFFF;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+.icon {
+    width: 25px;
+    height: 25px;
+    --background: #5570FF;
+    border-radius: 100%;
+}
+.box {
+    margin-bottom: 10px;
+    width: 706px;
+    height: 78px;
+    border: 1px solid #5570FF;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.add-button {
+    width: 25px;
+    height: 25px;
+    --background: #FF9F00;
+    border-radius: 100%;
+    --box-shadow: 0px;
+}
+.content {
+    height: 70%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}

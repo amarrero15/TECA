@@ -1,0 +1,56 @@
+.principal {
+    position: relative;
+    width: 814px;
+    //height: 77px;
+}
+.title {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #334D6E;
+}
+.words-input {
+    width: 125.66px;
+    height: 36.03px;
+    background: #FFFFFF;
+    border: 1px solid #5570FF;
+    box-sizing: border-box;
+    border-radius: 3px;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 0.01em;
+    color:#4357BF;
+    text-align: center;
+}
+.known-words-box {
+    position: absolute;
+    width: 1064px;
+    height: 77px;
+    bottom: 0px;
+    background: #FFFFFF;
+    border: 2px solid #B2BFFF;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+.bottom-title {
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 15px;
+    color: #334D6E;
+}
+.buttons {
+    width: 20px;
+    height: 20px;
+    padding: 0px;  
+    --background: #FF9F00;
+    border-radius: 100%;
+    --box-shadow: 0px;
+
+}

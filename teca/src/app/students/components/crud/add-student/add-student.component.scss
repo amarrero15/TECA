@@ -1,0 +1,34 @@
+.principal{
+    padding: 0px;
+    width: 674px;
+    height: 502px;
+}
+.header{
+    background: #5570FF;
+}
+.searchbar{
+    width: 473px;
+    margin-top: 116px;
+    margin-left: 41px;
+    margin-right: 169;
+    background: #A9C4E6;
+    border-radius: 10px;
+}
+.input{
+    font-family: Muli;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    color: #6F9CD6;
+}
+.studentContent{
+    width: 306px;
+    height: 147px;
+    margin-left: 71px;
+    margin-right: 297px;
+}
+.item #addIcon {
+    content: url('../../../../../assets/icon/general/addSudent.svg');
+ }

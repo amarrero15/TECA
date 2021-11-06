@@ -1,0 +1,27 @@
+<ion-grid class="principal">
+  <ion-row class="header">
+    <ion-item color="atomik">
+      <ion-label>Agregar estudiante</ion-label>
+    </ion-item>
+  </ion-row>
+  <ion-row>
+    <ion-item color="searchbar" class="searchbar">
+      <ion-input placeholder="introducir nombre del estudiante" class="input"></ion-input>
+      <ion-icon name="search-outline"></ion-icon>
+    </ion-item>
+  </ion-row>
+  <ion-row> 
+    <ion-content [scrollEvents]="true">
+      <ion-list class="studentContent">
+        <div *ngFor="let student of studentsList"  slot="fixed">
+          <ion-row>
+            <ion-item lines="none" (click)="addMyStudent(student)" >
+              <ion-icon id="addIcon"></ion-icon>
+              <ion-label>{{student.name}}</ion-label>
+            </ion-item>
+          </ion-row>
+        </div>
+      </ion-list>
+    </ion-content>   
+  </ion-row>
+</ion-grid>
