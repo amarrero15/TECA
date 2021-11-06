@@ -9,6 +9,54 @@
     margin-left: 7vw;
 }
 
+.box {
+    width: 60vw;
+    height: 20vh;
+    margin-bottom: 10px;
+    border: 2px solid #B2BFFF;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.synonymRow {
+    justify-content: center; 
+    height: 100%; 
+    width: 100%;
+}
+
+.synonymEqual {
+    align-self: center;
+}
+
+.synonymEqual ion-col {
+    justify-content: center;
+}
+
+.synonymBox {
+    align-self: center;
+}
+
+.synonymBox ion-row {
+    justify-content: center;
+}
+
+.equal {
+    width: 3vh;
+    height: 3vh;   
+    --background: #5570FF;
+    pointer-events: none;
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+
+.add-button {
+    width: 4vh;
+    height: 4vh;
+    --background: #FF9F00;
+    border-radius: 100%;
+    --box-shadow: 0px;
+}
+
 .titles {
     font-family: Muli;
     font-style: normal;
@@ -17,7 +65,8 @@
     line-height: 15px;
     color: #000000;
 }
-.input {
+
+.analogie-input {
     width: 20vw;
     height: 14vh;
     background: #FFFFFF;
@@ -25,6 +74,7 @@
     box-sizing: border-box;
     border-radius: 3px;
 }
+
 .icon {
     width: 2vh;
     height: 2vh;   
@@ -40,13 +90,7 @@
     border-radius: 15px;
     position: relative;
 }
-.add-button {
-    width: 4vh;
-    height: 4vh;
-    --background: #FF9F00;
-    border-radius: 100%;
-    --box-shadow: 0px;
-}
+
 .content {
     height: 70%;
     width: 100%;

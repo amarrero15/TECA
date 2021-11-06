@@ -14,7 +14,6 @@ export class ActivityHeaderComponent implements OnInit {
   ngOnInit() {}
 
   saveActivity() {
-    console.log("click")
     var node = document.getElementById("pngNode");
     htmlToImage.toPng(node)
     .then((dataUrl) => {
