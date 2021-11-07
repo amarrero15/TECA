@@ -57,3 +57,16 @@
 
     color: #334D6E;
 }
+
+@media only screen and (max-width: 1230px) {
+    .options{
+        margin-left: 275%;
+        width: max-content;
+    }
+}
+@media only screen and (max-width: 970px) {
+    .options{
+        margin-left: 138%;
+        width: max-content;
+    }
+}
