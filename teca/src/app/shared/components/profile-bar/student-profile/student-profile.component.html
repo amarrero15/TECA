@@ -1,5 +1,12 @@
 <ion-grid class="principal">
-    <ion-row>
+  <div>
+    <button id="notification-button" ion-button clear>
+        <ion-icon name="notifications">
+          <ion-badge id="notifications-badge" color="danger">8</ion-badge>
+        </ion-icon>              
+    </button>
+</div>  
+  <ion-row>
       <ion-col class="image">
         <ion-img [src]="currentUser.avatar"  class="avatar"></ion-img>
       </ion-col>
