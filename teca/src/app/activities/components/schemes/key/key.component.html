@@ -1,7 +1,6 @@
-
-  <ion-grid class="principal">
-    <ion-content>
-    <ion-row class="schemeArea">
+<ion-grid size="auto" class="principal">
+  <ion-content>
+    <ion-row size="auto"class="schemeArea">
 
       <ion-col size="auto">
         <ion-row style="height: 100%; width:100%; justify-content: center">
@@ -19,28 +18,32 @@
 
       <ion-col size="auto">
         <ion-row style="height: auto; ">
+
           <ion-col size="auto" style="height: auto;">
-            <ion-img src="assets/svg/activities/key.svg" class="key"></ion-img>
+            <img [width]="size" src="assets/svg/activities/key.svg" />
+
           </ion-col>
-          <!--ZONA IDEAS PRINCIPALES-->
-          <ion-col size="auto">
-            <ion-row *ngFor="let mainIdea of mainIdeas; let i = index" >
-              <ion-col size="auto">
+
+          <ion-col >
+            <ion-row  *ngFor="let mainIdea of mainIdeas; let i = index">
+              <ion-col size="auto" class="ideas-shape">
                 <ion-input class="main-idea-input" [(ngModel)]=mainIdea.principalIdea></ion-input>
-                <ion-fab-button style="margin-left: 125px;" class="buttons" (click)="addSecondaryIdea(i)">
+                <ion-fab-button style="margin-left: 14vw;" class="buttons" (click)="addSecondaryIdea(i)">
                   <ion-icon name="add"></ion-icon>
                 </ion-fab-button>
               </ion-col>
               <ion-col>
                 <ion-row *ngFor="let secondaryIdea of mainIdea.secondaryIdeas">
-                  <ion-input class="main-idea-input" ></ion-input>
+                  <ion-col class="secondideas-shape" [hidden]="secondaryContainer">
+                    <ion-input class="idea-input"></ion-input>
+
+                  </ion-col>
                 </ion-row>
               </ion-col>
             </ion-row>
           </ion-col>
         </ion-row>
       </ion-col>
-
     </ion-row>
   </ion-content>
 </ion-grid>
