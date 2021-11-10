@@ -18,7 +18,7 @@ import { ActivityHeaderComponent } from './components/activity-header/activity-h
 import { KeysComponent } from './components/schemes/keys/keys.component';
 import { KeyComponent } from './components/schemes/key/key.component';
 import { IdeasSecundaryComponent } from './shared/ideas-secundary/ideas-secundary.component'
-
+import { ExpandComponent } from './shared/expand/expand.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +37,7 @@ import { IdeasSecundaryComponent } from './shared/ideas-secundary/ideas-secundar
     , SynonymsComponent
     , TreeComponent
     , IdeasSecundaryComponent
+    ,ExpandComponent
     ],
   exports: [
     AnalogiesComponent

@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { ModalController } from "@ionic/angular";
 import { createGesture } from "@ionic/core/dist/esm";
 import { MindresponseL_R } from "src/app/activities/interfaces/mindset-response";
@@ -189,7 +189,7 @@ export class MentalComponent implements OnInit {
   getConectors() {
     if (this.mainIdeas.length > 0 && this.mainIdeas[0].sub.length > 0) {
       return this.sanitizer.bypassSecurityTrustHtml(
-        "<svg id='svgId' width='1440' height='796' xmlns='http://www.w3.org/2000/svg'>"+
+          this.getSvg() +
           this.getPath(
             this.mainIdeas[0].id,
             this.mainIdeas[0].px,
@@ -201,7 +201,21 @@ export class MentalComponent implements OnInit {
     }
   }
 
-
+  getSvg(){
+    var elemento = document.getElementById("principal");
+    var p = elemento.getBoundingClientRect();
+    try {
+      var elemento = document.getElementById("svgId");
+      var svg = elemento.getBoundingClientRect();
+      if(svg.width>p.width || svg.height>p.height){
+        return  "<svg id='svgId' width='"+svg.width+"' height='"+svg.height+"' xmlns='http://www.w3.org/2000/svg'>"
+      }
+    } catch (error) {
+     
+    }
+    return  "<svg id='svgId' width='"+p.width+"' height='"+p.height+"' xmlns='http://www.w3.org/2000/svg'>"
+   
+  }
   getPath(Pid: number, Ppx: number, Ppy: number, idea: any) {
     var str = "";
     if (idea.id !== 1)
@@ -257,7 +271,6 @@ export class MentalComponent implements OnInit {
     }
 
     return (
-      "<svg id='svgId' width='1440' height='796' xmlns='http://www.w3.org/2000/svg'>"+
       "<path  id='pn-" +
       id +
       "' d='M " +
