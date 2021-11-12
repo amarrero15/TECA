@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { IonicModule } from '@ionic/angular';
 
-import { KeyComponent } from './key.component';
+import { PopUpPage } from './pop-up.page';
 
-describe('KeyComponent', () => {
-  let component: KeyComponent;
-  let fixture: ComponentFixture<KeyComponent>;
+describe('PopUpPage', () => {
+  let component: PopUpPage;
+  let fixture: ComponentFixture<PopUpPage>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ KeyComponent ],
+      declarations: [ PopUpPage ],
       imports: [IonicModule.forRoot()]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(KeyComponent);
+    fixture = TestBed.createComponent(PopUpPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
   }));

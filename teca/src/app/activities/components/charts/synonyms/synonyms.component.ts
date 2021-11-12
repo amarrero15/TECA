@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class SynonymsComponent implements OnInit {
   value1='Sinónimos';
   value2='Antónimos';
-  type=false;
+  type=true;
   selectionType='';
+  Items = [];
   Synonyms = [
     {
       id:0,
@@ -25,37 +26,32 @@ export class SynonymsComponent implements OnInit {
     }
   ];
 
-  addSynonym() {
-    let newItem = {id: this.Synonyms.length, word1:"", word2: ""};
-    this.Synonyms.push(newItem);
-    console.log(this.Synonyms);
+  addItem() {
+    let newItem = this.type ? {id: this.Synonyms.length, word1:"", word2: ""} : {id: this.Antonyms.length, word1:"", word2: ""};
+    this.type ? this.Synonyms.push(newItem) : this.Antonyms.push(newItem);
   }
 
-  addAntonym() {
-    let newItem = {id: this.Antonyms.length, word1:"", word2: ""};
-    this.Antonyms.push(newItem);
-    console.log(this.Antonyms);
+  constructor() { 
+    this.Items = this.Synonyms;
   }
-
-  constructor() { }
 
   ngOnInit() {}
 
   selectType(event: any){
       this.type=!this.type;
-      console.log(this.type);
       switch(this.type){
         case true:{
           //Acá va lo relacionado con el sinonimo
           this.selectionType='Sinónimos';
+          this.Items = this.Synonyms;
           break;
         }
         case false:{
           //Acá lo relacionado con el antónimo;
           this.selectionType='Antónimos';
+          this.Items = this.Antonyms;
           break;
         }
-      console.log(this.type);
     }
   }
 

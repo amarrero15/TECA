@@ -7,7 +7,6 @@
     font-size: 28px;
     line-height: 35px;
     letter-spacing: 0.01em;
-
     color: #5570FF;
 }
 
@@ -23,14 +22,8 @@
 }
 
 .indications{
-    font-family: Mulish;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 13px;
-    line-height: 16px;
-    letter-spacing: 0.01em;
-
-    color: rgba(51, 77, 110, 0.83);
+    margin-left: 7.5vw;
+    margin-right: 10vw;
 }
 .item #downloadIcon {
     width: 25px;
@@ -44,9 +37,7 @@
     margin-right: auto;
     content: url('../../../../assets/icon/activities/activity-header/save.svg');
 }
-.options{
-    margin-left: 748.87px;
-}
+
 .textOptions{
     font-family: Muli;
     font-style: normal;
@@ -56,4 +47,17 @@
     letter-spacing: 0.01em;
 
     color: #334D6E;
+}
+
+@media only screen and (max-width: 1230px) {
+    .options{
+        margin-left: 275%;
+        width: max-content;
+    }
+}
+@media only screen and (max-width: 970px) {
+    .options{
+        margin-left: 138%;
+        width: max-content;
+    }
 }

@@ -4,7 +4,57 @@
     padding-top: 0px;
 }
 .selectionLabel{
-    width: 270px;
+    width: 20vw;
+    margin-bottom: 2vh;
+    margin-left: 7vw;
+}
+
+.box {
+    width: 60vw;
+    height: 20vh;
+    margin-bottom: 10px;
+    border: 2px solid #B2BFFF;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.synonymRow {
+    justify-content: center; 
+    height: 100%; 
+    width: 100%;
+}
+
+.synonymEqual {
+    align-self: center;
+}
+
+.synonymEqual ion-col {
+    justify-content: center;
+}
+
+.synonymBox {
+    align-self: center;
+}
+
+.synonymBox ion-row {
+    justify-content: center;
+}
+
+.equal {
+    width: 3vh;
+    height: 3vh;   
+    --background: #5570FF;
+    pointer-events: none;
+    margin-left: 10px; 
+    margin-right: 10px;
+}
+
+.add-button {
+    width: 4vh;
+    height: 4vh;
+    --background: #FF9F00;
+    border-radius: 100%;
+    --box-shadow: 0px;
 }
 
 .titles {
@@ -15,35 +65,32 @@
     line-height: 15px;
     color: #000000;
 }
-.input {
-    width: 288px;
-    height: 35px;
+
+.analogie-input {
+    width: 20vw;
+    height: 14vh;
     background: #FFFFFF;
-    border: 1px solid #B2BFFF;
+    border: 1px solid #5570FF;
     box-sizing: border-box;
     border-radius: 3px;
 }
+
 .icon {
-    width: 25px;
-    height: 25px;
+    width: 2vh;
+    height: 2vh;   
     --background: #5570FF;
-    border-radius: 100%;
+    pointer-events: none;
 }
 .box {
+    width: 60vw;
+    height: 20vh;
     margin-bottom: 10px;
-    width: 706px;
-    height: 78px;
-    border: 1px solid #5570FF;
+    border: 2px solid #B2BFFF;
     box-sizing: border-box;
     border-radius: 15px;
+    position: relative;
 }
-.add-button {
-    width: 25px;
-    height: 25px;
-    --background: #FF9F00;
-    border-radius: 100%;
-    --box-shadow: 0px;
-}
+
 .content {
     height: 70%;
     width: 100%;

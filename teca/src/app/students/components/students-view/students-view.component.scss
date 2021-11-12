@@ -10,6 +10,18 @@
 .addStudent{
     margin-left: 51.16171875vw;
     margin-right: 5.390625vw;
+    position: absolute;
+
+
+font-family: Mulish;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 18px;
+text-align: center;
+letter-spacing: 0.01em;
+
+color: #FFFFFF;
 }
 .selectView{
     width: 28.203125vw;
@@ -17,11 +29,15 @@
     margin-left: 8.11484375vw;
 }
 .viewSelection{
-    font-family: Muli;
+    width: 146px;
+height: 26px;
+    font-family: Mulish;
     font-style: normal;
     font-weight: 800;
-    font-size: 1.328125vw;
-    text-transform: none;
+    font-size: 17px;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    
     color: #4357BF;
 }
 .table{
