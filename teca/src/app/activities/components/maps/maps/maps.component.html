@@ -1,11 +1,29 @@
-<ion-grid>
-  <ion-row>
+<ion-grid class="principal">
+  <ion-row class="component">
     <ion-col size="auto">
       <app-student-side-bar></app-student-side-bar>
     </ion-col>
-    <ion-col>
-      <app-conceptual></app-conceptual>
-      <app-mental></app-mental>
+
+    <ion-col class="conten-center">
+      <ion-row>
+        <app-activity-header
+          [activityIndications]="activity.indications"
+        ></app-activity-header>
+      </ion-row>
+
+      <ion-row  size="auto" id="row-A"> 
+        <app-mental class="areaCuadro" *ngIf="visibleMental"></app-mental>
+        <app-conceptual class="areaCuadro" *ngIf="visibleConseptual"></app-conceptual>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <app-keywords [Keywords]="keywords"></app-keywords>
+        </ion-col>
+        <ion-col>
+          <ion-button shape="round" color="atomik" (click)="saveActivity()"
+            >Enviar a revisión</ion-button>
+        </ion-col>
+      </ion-row>
     </ion-col>
   </ion-row>
 </ion-grid>

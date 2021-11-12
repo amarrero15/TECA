@@ -4,7 +4,17 @@
     padding-top: 0px;
 }
 .selectionLabel{
-    width: 270px;
+    width:max-content;
+}
+
+.selectionLabel ion-label{
+    width: max-content;
+    height: 15px;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
 }
 
 .titles {
