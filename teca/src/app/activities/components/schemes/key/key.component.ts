@@ -8,19 +8,21 @@ import { KeyResponse } from '../../../interfaces/key-response';
 })
 export class KeyComponent implements OnInit {
   mainIdeas=[];
-  size=28;
+  keySize = "7vh";
   secondaryContainer = true;
+  primaryKey = true;
   constructor() { }
 
   ngOnInit() {}
 
   addPrincipalIdea(){
+    this.primaryKey = false;
     const newIdea: KeyResponse={
       id: this.mainIdeas.length+1,
       principalIdea: 'ideaPrincipal',
       secondaryIdeas: [],
     }
-    this.size = this.mainIdeas.length >= 5 ? this.size + 5 : this.size;
+    this.keySize = this.mainIdeas.length >= 2 ? "100%" : 7 + 2 * 4.7 * this.mainIdeas.length + "vh";
     this.mainIdeas.push(newIdea);
 
   };
@@ -29,7 +31,7 @@ export class KeyComponent implements OnInit {
 
     console.log(i)
     this.mainIdeas[i].secondaryIdeas.push('idea secundaria');
-    this.size = this.mainIdeas.length >= 3 ? this.size + 3 : this.size;
+    this.keySize = this.mainIdeas.length >= 2 ? "100%" : 7 + 2 * 4.7 * this.mainIdeas.length + "vh";
     this.secondaryContainer = false;
 
 }
