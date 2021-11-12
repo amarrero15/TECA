@@ -16,12 +16,14 @@
         </ion-row>
       </ion-col>
 
-      <ion-col size="auto">
+      <ion-col size="auto"   id="pngNode">
         <ion-row style="height: auto; ">
 
-          <ion-col size="auto" style="height: auto;">
-            <img [width]="size" src="assets/svg/activities/key.svg" />
-
+          <ion-col [hidden]="primaryKey" size="auto" style="height: auto;">
+            <svg width="26" [attr.height]="keySize" viewBox="0 0 26 220" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+              <path d="M25 1C20.7037 1.71805 12.2889 6.60079 13 20.3874V91.4743C13.2963 96.7879 11.3111 107.932 1 110" stroke="#5570FF" stroke-width="2"/>
+              <path d="M25 219C20.7037 218.282 12.2889 213.399 13 199.613V128.526C13.2963 123.212 11.3111 112.068 1 110" stroke="#5570FF" stroke-width="2"/>
+            </svg>  
           </ion-col>
 
           <ion-col >
