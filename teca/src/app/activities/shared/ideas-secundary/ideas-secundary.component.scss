@@ -1,0 +1,70 @@
+.palette {
+  margin-right: 5px;
+}
+.rowIcons {
+  align-items: end;
+  justify-content: end;
+}
+
+.col-idea:hover .rowIcons .buttons{
+    display: flex;
+}
+
+.rowIdeas {
+  align-content: center;
+  justify-content: center;
+}
+
+
+.Fmm {
+  padding-left: 12px;
+  padding-right: 12px;
+  background: #5570ff;
+  border-radius: 15px;
+  min-width: 100px;
+  -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+.Fmm2{
+  background: #FF9F00;
+  border-radius: 10px;
+}
+.Fmm-text {
+  font-family: Muli;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  background: #5570ff;
+}
+
+.fmm-input {
+  background-color: white;
+  color: black;
+  margin: 2px;
+  --padding-bottom: 0px;
+  --padding-top: 0px;
+  width: 140px;
+}
+
+.buttons {
+  width: 20px;
+  height: 20px;
+  padding: 0px;
+  --background: #ff9f00;
+  border-radius: 100%;
+  --box-shadow: 0px;
+  margin-left: 5px;
+  margin-top: 5px;
+  z-index: 5px;
+  display: none;
+}
+
+

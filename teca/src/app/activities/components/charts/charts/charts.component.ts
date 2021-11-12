@@ -64,7 +64,8 @@ export class ChartsComponent implements OnInit {
   }
 
   saveActivity(){
-    //console.log('Prueba');
+    console.log(this.response );
+    this.presentAlert();
     switch(this.activitySelected){
       case 'analogía':{
         this.activityService.createAnalogy(this.response);
@@ -117,11 +118,9 @@ export class ChartsComponent implements OnInit {
 
   async presentAlert() {
     const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      header: 'Actividad enviada',
-      subHeader: 'Envío exitoso',
-      message: 'Actividad enviada a revisión',
-      buttons: ['Aceptar']
+      cssClass: 'custom-alertDanger',
+      message: 'Espera mientras es revisado',
+      buttons: ['OK']
     });
 
     await alert.present();
