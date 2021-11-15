@@ -17,7 +17,7 @@ import { MapsComponent } from './components/maps/maps/maps.component';
 import { ActivityHeaderComponent } from './components/activity-header/activity-header.component';
 import { KeysComponent } from './components/schemes/keys/keys.component';
 import { KeyComponent } from './components/schemes/key/key.component';
-import { IdeasSecundaryComponent } from './shared/ideas-secundary/ideas-secundary.component'
+
 
 
 @NgModule({
@@ -36,7 +36,6 @@ import { IdeasSecundaryComponent } from './shared/ideas-secundary/ideas-secundar
     , SchemeComponent
     , SynonymsComponent
     , TreeComponent
-    , IdeasSecundaryComponent
     ],
   exports: [
     AnalogiesComponent

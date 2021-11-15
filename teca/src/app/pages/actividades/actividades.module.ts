@@ -15,8 +15,8 @@ import { ActivitiesModule } from '../../activities/activities.module';
     FormsModule,
     IonicModule,
     ActividadesPageRoutingModule,
-    ActivitiesModule,
+    ActivitiesModule
   ],
-  declarations: [ActividadesPage],
+  declarations: [ActividadesPage]
 })
 export class ActividadesPageModule {}

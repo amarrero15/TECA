@@ -1,29 +1,3 @@
-<ion-grid  id="principal" class="principal"  (click)="abrirModal()">
-  <ion-content width='100%' height='100%'>
-    <app-ideas-secundary
-      id="n-{{ Idea.id }}"
-      class="Item"
-      [ngStyle]="{'transform': getPosition(Idea.px,Idea.py)}"
-      *ngFor="let Idea of Center"
-      (IdeasAll)="ActualizarIdeas($event)"
-      [mainIdeas]="mainIdeas"
-      [ideasXMostrar]="Idea"
-      [lado]="'C'"
-      (mouseover)="cambiarPosicion(Idea.id)"
-    ></app-ideas-secundary>
-
-    <app-ideas-secundary
-      id="n-{{ Idea.id }}"
-      class="Item"
-      [ngStyle]="{'transform': getPosition(Idea.px,Idea.py)}"
-      *ngFor="let Idea of IdeasOrd"
-      (IdeasAll)="ActualizarIdeas($event)"
-      [mainIdeas]="mainIdeas"
-      [ideasXMostrar]="Idea"
-      [lado]="'R'"
-      (mouseover)="cambiarPosicion(Idea.id)"
-    ></app-ideas-secundary>
-
-    <div [innerHtml]="getConectors()"></div>
-  </ion-content>
-</ion-grid>
+<p>
+  mental works!
+</p>
