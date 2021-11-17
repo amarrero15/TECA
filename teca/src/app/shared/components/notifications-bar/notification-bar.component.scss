@@ -1,0 +1,35 @@
+
+.box {
+    color: aqua;
+    border: 5px solid rgb(255, 255, 255);
+    position:fixed; left:1250px; top:0px;
+  }
+
+ion-icon {
+    
+    font-size: 24px;
+    
+  }
+  #notification-button {    
+              
+    position: relative;
+    width: 42px;
+    top:1px;
+    right: 1px;
+    
+    overflow: visible!important;
+}
+#cart-btn {
+    
+    position: relative;
+    
+ }
+
+#notifications-badge {
+    
+    background-color: red;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    border-radius: 100%;
+}
