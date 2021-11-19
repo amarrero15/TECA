@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BannerComponent } from './components/banner/banner.component';
 import { IonicModule } from '@ionic/angular';
-import { NotificationBar } from './components/notifications-bar/notification-bar.component';
+import { NotificationBar } from './components/profile-bar/notifications-bar/notification-bar.component';
 import { ProfessorSideBarComponent } from './components/side-bar/professor-side-bar/professor-side-bar.component';
 import { StudentSideBarComponent } from './components/side-bar/student-side-bar/student-side-bar.component';
 
