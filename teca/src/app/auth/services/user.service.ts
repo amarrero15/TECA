@@ -24,4 +24,11 @@ export class UserService {
   getUsuario(_id: string) {
     return this.db.collection('users').doc(_id).valueChanges();
   }
+
+  // Aqui creo una funcion para enviar el tokenId 
+  setTokenId(token:string){
+    console.log(token)
+    localStorage.setItem('TK',token)
+  //this.db.collection('users').doc(id).set()
+  }
 }
