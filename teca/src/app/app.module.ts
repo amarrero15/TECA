@@ -9,7 +9,7 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import {firebaseConfig, environment} from '../environments/environment'
+import {firebaseConfig} from '../environments/environment'
 import {AngularFireModule} from '@angular/fire';
 import {AngularFireAuthModule} from '@angular/fire/auth';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -32,7 +32,7 @@ import { AngularFireMessagingModule } from '@angular/fire/messaging';
       BrowserModule
     , IonicModule.forRoot()
     , AppRoutingModule
-    , AngularFireModule.initializeApp(environment.firebase/*firebaseConfig*/)
+    , AngularFireModule.initializeApp(firebaseConfig)
     , AngularFireMessagingModule
     , AngularFireAuthModule, BrowserAnimationsModule
     , MatTableModule,
@@ -40,7 +40,7 @@ import { AngularFireMessagingModule } from '@angular/fire/messaging';
     MatButtonModule,
     FormsModule,
     PipesModule,
-    ServiceWorkerModule.register('combined-sw.js', { enabled: environment.production })],
+    ServiceWorkerModule.register('combined-sw.js', { enabled: true})],
   providers: [
     StatusBar,
     SplashScreen,

@@ -16,7 +16,8 @@ export class UserService {
       password: user.password,
       tipo: user.type,
       avatar: user.avatar,
-      nombre: user.name
+      nombre: user.name,
+      keyPush: user.keyPush
     });
     // return this.http.post<TokenResponse>(this.URL_API + '/signup', user).toPromise();
   }
@@ -27,8 +28,6 @@ export class UserService {
 
   // Aqui creo una funcion para enviar el tokenId 
   setTokenId(token:string){
-    console.log(token)
-    localStorage.setItem('TK',token)
-  //this.db.collection('users').doc(id).set()
+    this.db.collection('users').doc(localStorage.getItem('token')).update({'keyPush':token})
   }
 }

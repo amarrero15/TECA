@@ -1,9 +1,9 @@
 {
-  "name": "app",
-  "short_name": "app",
+  "name": "Teca",
+  "short_name": "Teca",
   "gcm_sender_id": "103953800507",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "theme_color": "#5570FF",
+  "background_color": "#5570FF",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
