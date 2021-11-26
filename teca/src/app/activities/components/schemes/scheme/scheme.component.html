@@ -2,6 +2,7 @@
   <ion-row class="component">
     <ion-col size="auto">
       <app-student-side-bar></app-student-side-bar>
+      <app-NotificationBar></app-NotificationBar>
     </ion-col>
     <ion-col>
       <app-activity-header [activityIndications]="activity.indications"></app-activity-header>
@@ -15,6 +16,7 @@
       <app-keywords [Keywords]="keywords"></app-keywords>
       
     </ion-col>
+
     <ion-col class="saveButton">
       <ion-button shape="round" color="atomik" (click)="saveActivity()">Enviar a revisión</ion-button>
     </ion-col>
