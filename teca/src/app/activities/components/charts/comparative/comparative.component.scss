@@ -19,10 +19,8 @@
     border-width: 2px !important;
     border-style: solid !important;
     border-radius: 2px;
-    width: 20px;
-    height: 20px;
-    
-    
+    width: 2vh;
+    height: 2vh;
     border-color : #5570FF !important;
     --checkmark-color:#FF9F00;
     --checkmark-width:10px;
@@ -52,8 +50,8 @@
 .frame-div {
     position: relative;
     margin-top: 10px;
-    width: 334px;
-    height: 200px;
+    width: 25vw;
+    height: 20vh;
     background: #FFFFFF;
     border: 1px solid #5570FF;
     box-sizing: border-box;
@@ -61,10 +59,10 @@
     border-radius: 3px;
 }
 .frame-input {
-    height: 35px;
+    height: 3.5vh;
     width: 100%;
     border-bottom: 1px solid #5570FF;
 }
 .frame-textarea {
-    height: 150px;
+    height: 10vh;
 }

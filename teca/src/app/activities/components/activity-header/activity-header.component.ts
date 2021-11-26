@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-
+import * as htmlToImage from 'html-to-image';
+import * as download from 'downloadjs';
 @Component({
   selector: 'app-activity-header',
   templateUrl: './activity-header.component.html',
@@ -12,4 +13,14 @@ export class ActivityHeaderComponent implements OnInit {
 
   ngOnInit() {}
 
+  saveActivity() {
+    var node = document.getElementById("pngNode");
+    htmlToImage.toPng(node)
+    .then((dataUrl) => {
+      download(dataUrl, 'guia.png');
+    })
+    .catch(err => {
+      console.log(err);
+    });
+  }
 }
