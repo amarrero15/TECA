@@ -2,9 +2,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { User } from '../../../../../models/user';
 
 @Component({
-  selector: 'app-girl-avatar',
-  templateUrl: './girl-avatar.component.html',
-  styleUrls: ['./girl-avatar.component.scss'],
+  selector: 'app-avatar',
+  templateUrl: './avatar.component.html',
+  styleUrls: ['./avatar.component.scss'],
 })
 export class GirlAvatarComponent implements OnInit {
   @Input() comando: string;
